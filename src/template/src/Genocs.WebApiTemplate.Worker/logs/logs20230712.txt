@@ -1,0 +1,6 @@
+2023-07-12 23:33:15.471 +02:00 [INF] Configured endpoint submit-order, Consumer: Genocs.WebApiTemplate.Worker.Consumers.SubmitOrderConsumer
+2023-07-12 23:33:15.933 +02:00 [INF] MassTransitConsoleHostedService StartAsync called!
+2023-07-12 23:33:16.765 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-12 23:33:16.773 +02:00 [INF] Hosting environment: Development
+2023-07-12 23:33:16.779 +02:00 [INF] Content root path: C:\dev\genocs\github\genocs-webapi-template\src\template\src\Genocs.WebApiTemplate.Worker
+2023-07-12 23:33:17.395 +02:00 [INF] Bus started: "rabbitmq://localhost/"

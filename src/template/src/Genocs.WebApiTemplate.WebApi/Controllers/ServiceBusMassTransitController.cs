@@ -94,12 +94,6 @@ public class ServiceBusMassTransitController : ControllerBase
 
     //    //_mutexRepository.ReplaceOne(updateFilter, mutex);
 
-    //    //// Send command with AzureServiceBus
-    //    //await _azureServiceBusQueue.SendAsync(new DemoCommand("Test command"));
-
-    //    //// Publish an event with AzureServiceBus
-    //    //Dictionary<string, object> filters = new Dictionary<string, object>();
-    //    //filters.Add("demotype", "demo1");
 
     //    //await _azureServiceBusTopic.PublishAsync(new DemoEvent("demo event 1 subscription", "address"), filters);
 
