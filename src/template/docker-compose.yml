@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  genocs.webapitemplate:
+    image: ${DOCKER_REGISTRY-}genocswebapitemplate
+    build:
+      context: .
+      dockerfile: src/Genocs.WebApiTemplate.WebApi/Dockerfile
