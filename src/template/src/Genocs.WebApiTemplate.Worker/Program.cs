@@ -37,8 +37,6 @@ IHost host = Host.CreateDefaultBuilder(args)
         RegisterCustomMongoRepository(services, hostContext.Configuration);
 
         ConfigureMassTransit(services, hostContext.Configuration);
-        //ConfigureAzureServiceBusTopic(services, hostContext.Configuration);
-        //ConfigureAzureServiceBusQueue(services, hostContext.Configuration);
 
         services.AddCustomOpenTelemetry(hostContext.Configuration);
     })
