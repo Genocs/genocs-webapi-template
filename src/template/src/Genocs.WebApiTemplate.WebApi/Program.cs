@@ -10,7 +10,6 @@ using Genocs.MessageBrokers.Outbox;
 using Genocs.MessageBrokers.Outbox.MongoDB;
 using Genocs.MessageBrokers.RabbitMQ;
 using Genocs.Metrics.Prometheus;
-using Genocs.Persistence.MongoDb.Extensions;
 using Genocs.Persistence.MongoDb.Legacy;
 using Genocs.Persistence.Redis;
 using Genocs.Secrets.Vault;
@@ -23,11 +22,8 @@ using Genocs.WebApi.Swagger;
 using Genocs.WebApi.Swagger.Docs;
 using Genocs.WebApiTemplate.WebApi;
 using Genocs.WebApiTemplate.WebApi.Infrastructure.Extensions;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Serilog;
 using Serilog.Events;
-using System.Reflection;
-using System.Text.Json.Serialization;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -47,7 +43,6 @@ builder.Host
 
 var services = builder.Services;
 
-
 services.AddGenocs()
         .AddErrorHandler<ExceptionToResponseMapper>()
         .AddServices()
@@ -57,7 +52,7 @@ services.AddGenocs()
         .AddFabio()
         .AddJaeger()
         .AddMongo()
-        //.AddMongoRepository<Order, Guid>("orders")
+        //.AddMongoRepository<Product, Guid>("products")
         .AddCommandHandlers()
         .AddEventHandlers()
         .AddQueryHandlers()
@@ -133,7 +128,7 @@ app.UseGenocs()
     .UseCertificateAuthentication()
     .UseEndpoints(r => r.MapControllers())
     .UseDispatcherEndpoints(endpoints => endpoints
-        .Get("", ctx => ctx.Response.WriteAsync("Orders Service"))
+        .Get("", ctx => ctx.Response.WriteAsync("Genocs.WebApiTemplate Service"))
         .Get("ping", ctx => ctx.Response.WriteAsync("pong")))
     //.Get<GetOrder, OrderDto>("orders/{orderId}")
     //.Post<CreateOrder>("orders",

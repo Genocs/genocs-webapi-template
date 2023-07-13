@@ -1,7 +1,6 @@
 ﻿using Genocs.Persistence.MongoDb.Repositories;
 using Genocs.WebApiTemplate.Domain.Aggregates;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 
 namespace Genocs.WebApiTemplate.WebApi.Controllers;
 
