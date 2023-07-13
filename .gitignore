@@ -289,3 +289,4 @@ __pycache__/
 
 # Templates
 build
+/src/template/src/Genocs.WebApiTemplate.WebApi/logs
