@@ -4,3 +4,21 @@
 2023-07-12 23:33:16.773 +02:00 [INF] Hosting environment: Development
 2023-07-12 23:33:16.779 +02:00 [INF] Content root path: C:\dev\genocs\github\genocs-webapi-template\src\template\src\Genocs.WebApiTemplate.Worker
 2023-07-12 23:33:17.395 +02:00 [INF] Bus started: "rabbitmq://localhost/"
+2023-07-12 23:54:36.949 +02:00 [INF] Configured endpoint submit-order, Consumer: Genocs.WebApiTemplate.Worker.Consumers.SubmitOrderConsumer
+2023-07-12 23:54:37.292 +02:00 [INF] MassTransitConsoleHostedService StartAsync called!
+2023-07-12 23:54:37.633 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-12 23:54:37.643 +02:00 [INF] Hosting environment: Development
+2023-07-12 23:54:37.660 +02:00 [INF] Content root path: C:\dev\genocs\github\genocs-webapi-template\src\template\src\Genocs.WebApiTemplate.Worker
+2023-07-12 23:54:38.120 +02:00 [INF] Bus started: "rabbitmq://localhost/"
+2023-07-12 23:56:37.557 +02:00 [INF] Configured endpoint submit-order, Consumer: Genocs.WebApiTemplate.Worker.Consumers.SubmitOrderConsumer
+2023-07-12 23:56:37.980 +02:00 [INF] MassTransitConsoleHostedService StartAsync called!
+2023-07-12 23:56:38.273 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-12 23:56:38.281 +02:00 [INF] Hosting environment: Development
+2023-07-12 23:56:38.311 +02:00 [INF] Content root path: C:\dev\genocs\github\genocs-webapi-template\src\template\src\Genocs.WebApiTemplate.Worker
+2023-07-12 23:56:38.768 +02:00 [INF] Bus started: "rabbitmq://localhost/"
+2023-07-12 23:59:08.584 +02:00 [INF] Configured endpoint submit-order, Consumer: Genocs.WebApiTemplate.Worker.Consumers.SubmitOrderConsumer
+2023-07-12 23:59:09.168 +02:00 [INF] MassTransitConsoleHostedService StartAsync called!
+2023-07-12 23:59:09.565 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-12 23:59:09.612 +02:00 [INF] Hosting environment: Development
+2023-07-12 23:59:09.630 +02:00 [INF] Content root path: C:\dev\genocs\github\genocs-webapi-template\src\template\src\Genocs.WebApiTemplate.Worker
+2023-07-12 23:59:10.201 +02:00 [INF] Bus started: "rabbitmq://localhost/"
