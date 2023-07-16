@@ -30,9 +30,9 @@ To build the package run the following commands:
 [Official Link](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates)
 
 
-```sh
-cd ./src
-nuget pack -output nupkgs
+``` PS
+cd .\src
+.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version 1.0.1
 dotnet new -u Genocs.WebApiTemplate
 dotnet new -i Genocs.WebApiTemplate.1.0.{version}.nupkg
 dotnet new webapi --help
