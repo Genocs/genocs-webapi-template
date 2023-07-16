@@ -22,7 +22,7 @@ public class ServiceBusMassTransitController : ControllerBase
 
     [HttpPost("SubmitOrder")]
     [Consumes(MediaTypeNames.Application.Json)]
-    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(string), StatusCodes.Status202Accepted)]
     public async Task<IActionResult> PostSubmitOrder()
     {
         // Publish an event with MassTransit
@@ -35,12 +35,12 @@ public class ServiceBusMassTransitController : ControllerBase
 
         _logger.LogInformation("SubmitOrder Sent");
 
-        return Ok("Sent");
+        return Accepted("Sent");
     }
 
     [HttpPost("OrderSubmitted")]
     [Consumes(MediaTypeNames.Application.Json)]
-    [ProducesResponseType(typeof(string), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(string), StatusCodes.Status202Accepted)]
     public async Task<IActionResult> PostOrderSubmitted()
     {
         // Publish an event with MassTransit
@@ -53,7 +53,7 @@ public class ServiceBusMassTransitController : ControllerBase
 
         _logger.LogInformation("OrderSubmitted Sent");
 
-        return Ok("Sent");
+        return Accepted("Sent");
     }
 
 

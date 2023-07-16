@@ -1,7 +1,6 @@
 ﻿using Genocs.Core.Domain.Entities.Auditing;
 using Genocs.Core.Domain.Repositories;
 using Genocs.Persistence.MongoDb.Repositories;
-using MongoDB.Bson;
 
 namespace Genocs.WebApiTemplate.Domain.Aggregates;
 
@@ -9,7 +8,7 @@ namespace Genocs.WebApiTemplate.Domain.Aggregates;
 public class User : IMongoDbEntity, IHasCreationTime
 {
 
-    public ObjectId Id { get; set; }
+    public Guid Id { get; set; }
     public string UserId { get; set; } = default!;
     public DateTime CreationTime { get; set; } = DateTime.UtcNow;
     public string Username { get; set; } = default!;
@@ -18,7 +17,7 @@ public class User : IMongoDbEntity, IHasCreationTime
 
     public User(string userId, string username, decimal age, string country)
     {
-        Id = ObjectId.GenerateNewId();
+        Id = Guid.NewGuid();
         UserId = userId;
         Username = username;
         Age = age;
@@ -27,6 +26,6 @@ public class User : IMongoDbEntity, IHasCreationTime
 
     public bool IsTransient()
     {
-        return true;
+        return false;
     }
 }

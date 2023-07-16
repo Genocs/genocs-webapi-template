@@ -28,7 +28,7 @@ public class MongoDbRepositoryController : ControllerBase
     public async Task<IActionResult> PostDummy()
     {
         User user = new User(Guid.NewGuid().ToString(), Guid.NewGuid().ToString(), 21, "ITA");
-        var objectId = await _userRepository.InsertAndGetIdAsync(user);
-        return Ok(objectId.ToString());
+        var result = await _userRepository.InsertAsync(user);
+        return Ok(result.Id.ToString());
     }
 }

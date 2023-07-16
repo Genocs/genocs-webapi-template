@@ -1,13 +1,11 @@
-using Genocs.Core.Domain.Repositories;
+using Genocs.Core.Builders;
 using Genocs.Logging;
 using Genocs.Monitoring;
 using Genocs.Persistence.MongoDb.Extensions;
-using Genocs.WebApiTemplate.Domain.Aggregates;
 using Genocs.WebApiTemplate.Worker;
 using Genocs.WebApiTemplate.Worker.Consumers;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using MongoDB.Bson;
 using Serilog;
 using Serilog.Events;
 using System.Reflection;
@@ -27,14 +25,13 @@ IHost host = Host.CreateDefaultBuilder(args)
         // Run the hosted service 
         services.AddHostedService<MassTransitConsoleHostedService>();
 
-        // It adds the MongoDb Repository to the project and register all the Domain Objects with the standard interface
-        services.AddMongoDatabase(hostContext.Configuration);
+        services
+            .AddGenocs(hostContext.Configuration)
+            .AddMongoFast() // It adds the MongoDb Repository to the project and register all the Domain Objects with the standard interface
+            .RegisterMongoRepositories(Assembly.GetExecutingAssembly()); // It registers the repositories that has been overridden. No need in case of standard repository
 
-        // It registers the repositories that has been overridden
-        // No need in whenever only 
-        services.RegisterRepositories(Assembly.GetExecutingAssembly());
+        //RegisterCustomMongoRepository(services, hostContext.Configuration);
 
-        RegisterCustomMongoRepository(services, hostContext.Configuration);
 
         ConfigureMassTransit(services, hostContext.Configuration);
 
@@ -64,7 +61,7 @@ static IServiceCollection ConfigureMassTransit(IServiceCollection services, ICon
 
 static IServiceCollection RegisterCustomMongoRepository(IServiceCollection services, IConfiguration configuration)
 {
-    services.AddScoped<IRepository<Order, ObjectId>, Genocs.Persistence.MongoDb.Repositories.MongoDbRepository<Order>>();
+    //services.AddScoped<IRepository<Order, ObjectId>, Genocs.Persistence.MongoDb.Repositories.MongoDbRepository<Order>>();
 
     return services;
 }

@@ -10,7 +10,7 @@ using Genocs.MessageBrokers.Outbox;
 using Genocs.MessageBrokers.Outbox.MongoDB;
 using Genocs.MessageBrokers.RabbitMQ;
 using Genocs.Metrics.Prometheus;
-using Genocs.Persistence.MongoDb.Legacy;
+using Genocs.Persistence.MongoDb.Extensions;
 using Genocs.Persistence.Redis;
 using Genocs.Secrets.Vault;
 using Genocs.Tracing.Jaeger;
@@ -128,7 +128,7 @@ app.UseGenocs()
     .UseCertificateAuthentication()
     .UseEndpoints(r => r.MapControllers())
     .UseDispatcherEndpoints(endpoints => endpoints
-        .Get("", ctx => ctx.Response.WriteAsync("Genocs.WebApiTemplate Service"))
+        .Get("", ctx => ctx.Response.WriteAsync("Genocs Web Api Template Service"))
         .Get("ping", ctx => ctx.Response.WriteAsync("pong")))
     //.Get<GetOrder, OrderDto>("orders/{orderId}")
     //.Post<CreateOrder>("orders",
