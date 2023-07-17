@@ -5,8 +5,8 @@
     <version>1.0.0</version>
     <authors>Nocco Giovanni Emanuele</authors>
     <owners>[Genocs] Nocco Giovanni Emanuele</owners>
-    <projectUrl>https://github.com/Genocs/web-api-template</projectUrl>
-    <repository type="git" url="https://github.com/Genocs/web-api-template.git" branch="master" commit="37bd57f2cdca35cb0c346d214468d7a5ede9057d" />
+    <projectUrl>https://github.com/Genocs/genocs-webapi-template</projectUrl>
+    <repository type="git" url="https://github.com/Genocs/genocs-webapi-template" branch="master" commit="37bd57f2cdca35cb0c346d214468d7a5ede9057d" />
     <license type="expression">MIT</license>
     <icon>genocs-icon.png</icon>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
