@@ -12,13 +12,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: keyvaultreader
+                name: template-webapi
                 port:
                   number: 80
-          - path: /bar
-            pathType: Prefix
-            backend:
-              service:
-                name: qrcode
-                port:
-                  number: 80
+

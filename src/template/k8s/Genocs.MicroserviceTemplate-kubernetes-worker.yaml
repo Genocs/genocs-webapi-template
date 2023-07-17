@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nservicebus
+  name: template-worker
   labels:
-    app: nservicebus-busworker
+    app: template-worker
 spec:
   selector:
     matchLabels:
-      app: nservicebus-busworker
+      app: template-worker
   replicas: 1
   template:
     metadata:
       labels:
-        app: nservicebus-busworker
+        app: template-worker
     spec:
       containers:
-        - name: nservicebus-busworker
-          image: genocsacr.azurecr.io/nservicebusworker:1.1.370
+        - name: template-worker
+          image: genocsacr.azurecr.io/templateworker:1.0.0
           env:
             - name: ParticularOptions__TransportConnectionString
               value: "<<fill_with-your_data>>"
@@ -29,16 +29,3 @@ spec:
             limits:
               cpu: 250m
               memory: 1024Mi
-          ports:
-            - containerPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nservicebus
-spec:
-  # type: LoadBalancer
-  ports:
-    - port: 80
-  selector:
-    app: nservicebus-busworker
