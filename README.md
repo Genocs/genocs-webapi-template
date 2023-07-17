@@ -12,7 +12,7 @@ This is an WebApi Template that help you create LOB applications. It follows the
 Create, build, test and run:
 
 ``` sh
-dotnet new -i Genocs.WebApiTemplate::{version]
+dotnet new install Genocs.WebApiTemplate::{version]
 dotnet new gnx-webapi -n {CompanyName.ProjectName.ServiceName}
 cd {CompanyName.ProjectName.ServiceName}
 dotnet build src/{CompanyName.ProjectName.ServiceName}.WebApi
@@ -32,9 +32,9 @@ To build the package run the following commands:
 
 ``` PS
 cd .\src
-.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version 1.0.0
+.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version 1.0.{version}
 dotnet new -u Genocs.WebApiTemplate
-dotnet new -i Genocs.WebApiTemplate.1.0.{version}.nupkg
+dotnet new install Genocs.WebApiTemplate.1.0.{version}.nupkg
 dotnet new gnx-webapi --help
 dotnet new gnx-webapi --name {CompanyName.ProjectName.ServiceName}
 ```
