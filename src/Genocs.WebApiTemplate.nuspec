@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata minClientVersion="5.0.0">
+  <metadata minClientVersion="5.10.0">
     <id>Genocs.WebApiTemplate</id>
     <version>1.0.0</version>
     <authors>Nocco Giovanni Emanuele</authors>
@@ -19,7 +19,7 @@ Install the package:
 $ dotnet new -i Genocs.WebApiTemplate::1.0.0
 
 Build a solution:
-$ dotnet new webapi
+$ dotnet new gnx-webapi
     </description>
     <releaseNotes>
 - Relesase 1.0.0:
@@ -66,10 +66,13 @@ $ dotnet new webapi
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
+
     <dependencies>
     </dependencies>
+
   </metadata>
   <files>
     <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.log;**\.vscode\**\*;" />
+    <file src="template\README.md" target="" />
   </files>
 </package>

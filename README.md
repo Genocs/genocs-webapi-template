@@ -13,7 +13,7 @@ Create, build, test and run:
 
 ``` sh
 dotnet new -i Genocs.WebApiTemplate::{version]
-dotnet new webapi -n {CompanyName.ProjectName.ServiceName}
+dotnet new gnx-webapi -n {CompanyName.ProjectName.ServiceName}
 cd {CompanyName.ProjectName.ServiceName}
 dotnet build src/{CompanyName.ProjectName.ServiceName}.WebApi
 
@@ -32,11 +32,11 @@ To build the package run the following commands:
 
 ``` PS
 cd .\src
-.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version 1.0.1
+.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version 1.0.0
 dotnet new -u Genocs.WebApiTemplate
 dotnet new -i Genocs.WebApiTemplate.1.0.{version}.nupkg
-dotnet new webapi --help
-dotnet new webapi --name {CompanyName.ProjectName.ServiceName}
+dotnet new gnx-webapi --help
+dotnet new gnx-webapi --name {CompanyName.ProjectName.ServiceName}
 ```
 
 
@@ -46,13 +46,13 @@ Run `dotnet new -i Genocs.WebApiTemplate` then try the following commands.
 
 ``` sh
 # Complete suite of use cases.
-dotnet new webapi --use-cases full
+dotnet new gnx-webapi --use-cases full
 
 # Register account and get customer details.
-dotnet new webapi --use-cases basic
+dotnet new gnx-webapi --use-cases basic
 
 # Read only use cases
-dotnet new webapi --use-cases readonly
+dotnet new gnx-webapi --use-cases readonly
 ```
 
 

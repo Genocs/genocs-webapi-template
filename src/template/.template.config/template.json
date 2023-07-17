@@ -7,8 +7,9 @@
   "name": "Genocs: Web Api .NET7",
   "identity": "Genocs.MicroserviceTemplate",
   "groupIdentity": "Genocs.MicroserviceTemplate",
-  "shortName": "webapi",
+  "shortName": "gnx-webapi",
   "tags": {
+    "type": "project",
     "language": "C#" // Specify that this template is in C#.
   },
   "sourceName": "Genocs.MicroserviceTemplate", // Will replace the string 'Genocs.MicroserviceTemplate' with the value provided via -n.
@@ -52,7 +53,7 @@
       "path": "src/Genocs.MicroserviceTemplate.AcceptanceTests/Genocs.MicroserviceTemplate.AcceptanceTests.csproj"
     },
     {
-      "path": "src/Genocs.MicroserviceTemplate.Application/Genocs.MicroserviceTemplate.Application.csproj"
+      "path": "src/Genocs.MicroserviceTemplate.Contracts/Genocs.MicroserviceTemplate.Contracts.csproj"
     },
     {
       "path": "src/Genocs.MicroserviceTemplate.Domain/Genocs.MicroserviceTemplate.Domain.csproj"
@@ -64,9 +65,6 @@
       "path": "src/Genocs.MicroserviceTemplate.IntegrationTests/Genocs.MicroserviceTemplate.IntegrationTests.csproj"
     },
     {
-      "path": "src/Genocs.MicroserviceTemplate.Shared/Genocs.MicroserviceTemplate.Shared.csproj"
-    },
-    {
       "path": "src/Genocs.MicroserviceTemplate.UnitTests/Genocs.MicroserviceTemplate.UnitTests.csproj"
     },
     {
@@ -74,9 +72,6 @@
     },
     {
       "path": "src/Genocs.MicroserviceTemplate.Worker/Genocs.MicroserviceTemplate.Worker.csproj"
-    },
-    {
-      "path": "src/Genocs.MicroserviceTemplate.Worker.MassTransit/Genocs.MicroserviceTemplate.Worker.MassTransit.csproj"
     }
   ]
 }
