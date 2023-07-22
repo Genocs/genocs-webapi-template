@@ -13,8 +13,6 @@ Genocs.WebApiTemplate is part of the Genocs.Library project.
      style="float: left; margin-right: 10px; padding-bottom: 50px;" />
 
 
-
-
 To get all the information you need to use it: please check
 **[Genocs Library documentation](https://genocs-blog.netlify.app/)**
 
