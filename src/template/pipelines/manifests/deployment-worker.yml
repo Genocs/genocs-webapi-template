@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: <<name>>-worker
+  namespace: <<application-namespace>>
+  labels:
+    app: <<name>>e-worker
+    run: <<name>>-worker
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: <<name>>-worker
+
+  template:
+    metadata:
+      labels:
+        app: <<name>>-worker
+        run: <<name>>-worker
+
+    spec:
+      containers:
+        - name: <<name>>-worker
+          image: <<your_acr>>.azurecr.io/<<name>>.worker
+          env:
+            - name: DOTNET_ENVIRONMENT
+              value: "Container"
+
+          resources:
+            requests:
+              cpu: "100m" #10% of a core
+              memory: "100Mi"
+            limits:
+              cpu: "100m" #10% of a core
+              memory: "100Mi"
+          imagePullPolicy: Always
+
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst

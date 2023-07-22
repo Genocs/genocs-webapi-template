@@ -1,8 +1,14 @@
-version: '3.9'
+version: "3.9"
 
 services:
-  genocs.webapitemplate:
-    image: ${DOCKER_REGISTRY-}genocswebapitemplate
+  genocs.webapitemplate.webapi:
+    image: ${DOCKER_REGISTRY-}genocswebapitemplate.webapi
     build:
       context: .
-      dockerfile: src/Genocs.WebApiTemplate.WebApi/Dockerfile
+      dockerfile: ./webapi.dockerfile
+
+  genocs.webapitemplate.worker:
+    image: ${DOCKER_REGISTRY-}genocswebapitemplate.worker
+    build:
+      context: .
+      dockerfile: ./worker.dockerfile

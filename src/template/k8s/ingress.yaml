@@ -15,4 +15,3 @@ spec:
                 name: template-webapi
                 port:
                   number: 80
-
