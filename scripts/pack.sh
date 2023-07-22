@@ -4,7 +4,7 @@ echo Triggering NuGet package build
 
 dotnet pack ./src/Genocs.QRCodeLibrary/Genocs.QRCodeLibrary.csproj -o . -p:Version=2.0.$TRAVIS_BUILD_NUMBER
 
-echo Uploading Genocs.CleanArchitectureTemplate package to NuGet using branch $TRAVIS_BRANCH
+echo Uploading Genocs.WebApiTemplate package to NuGet using branch $TRAVIS_BRANCH
 
 case "$TRAVIS_BRANCH" in
   "master")

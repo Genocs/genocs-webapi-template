@@ -12,14 +12,14 @@ This is an WebApi Template that help you create LOB applications. It follows the
 Create, build, test and run:
 
 ``` sh
-dotnet new install Genocs.WebApiTemplate::{version]
-dotnet new gnx-webapi -n {CompanyName.ProjectName.ServiceName}
-cd {CompanyName.ProjectName.ServiceName}
-dotnet build src/{CompanyName.ProjectName.ServiceName}.WebApi
+dotnet new install Genocs.WebApiTemplate::{{semver}}
+dotnet new gnx-webapi -n {{CompanyName.ProjectName.ServiceName}}
+cd {{CompanyName.ProjectName.ServiceName}}
+dotnet build src/{{CompanyName.ProjectName.ServiceName}}.WebApi
 
 dotnet test
-cd src/{CompanyName.ProjectName.ServiceName}.WebApi
-dotnet run src/{CompanyName.ProjectName.ServiceName}.WebApi
+cd src/{{CompanyName.ProjectName.ServiceName}}.WebApi
+dotnet run src/{{CompanyName.ProjectName.ServiceName}}.WebApi
 ```
 
 
@@ -30,29 +30,28 @@ To build the package run the following commands:
 [Official Link](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates)
 
 
-``` PS
+``` PowerShell
 cd .\src
-.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version 1.0.{version}
+.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version 1.0.{{semver}}
 dotnet new -u Genocs.WebApiTemplate
-dotnet new install Genocs.WebApiTemplate.1.0.{version}.nupkg
+dotnet new install Genocs.WebApiTemplate.{{semver}}.nupkg
 dotnet new gnx-webapi --help
-dotnet new gnx-webapi --name {CompanyName.ProjectName.ServiceName}
+dotnet new gnx-webapi --name {{CompanyName.ProjectName.ServiceName}}
+
+# To get a list of the installed templetes
+dotnet new list
+
+# To get a list of templates that can be removed
+dotnet new -u
 ```
 
 
 ## Sample application
 
-Run `dotnet new -i Genocs.WebApiTemplate` then try the following commands.
+Run `dotnet new install Genocs.WebApiTemplate` then try the following commands.
 
 ``` sh
-# Complete suite of use cases.
-dotnet new gnx-webapi --use-cases full
-
-# Register account and get customer details.
-dotnet new gnx-webapi --use-cases basic
-
-# Read only use cases
-dotnet new gnx-webapi --use-cases readonly
+dotnet new gnx-webapi
 ```
 
 
