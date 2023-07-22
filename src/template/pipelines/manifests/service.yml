@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 
 metadata:
-  name: <<name>>-service
-  namespace: <<application-namespace>>
+  name: {{name}}-service
+  namespace: {{application_namespace}}
   labels:
-    run: <<name>>-webapi
+    run: {{name}}-webapi
 
 spec:
   type: ClusterIP
@@ -17,4 +17,4 @@ spec:
       targetPort: 80
 
   selector:
-    run: <<name>>-webapi
+    run: {{name}}-webapi

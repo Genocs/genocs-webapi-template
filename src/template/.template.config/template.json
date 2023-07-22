@@ -15,26 +15,26 @@
   "sourceName": "Genocs.WebApiTemplate", // Will replace the string 'Genocs.WebApiTemplate' with the value provided via -n.
   "preferNameDirectory": true,
   "symbols": {
-    "use-cases": {
+    "genocs-components": {
       "type": "parameter",
       "datatype": "choice",
       "defaultValue": "full",
       "choices": [
         {
           "choice": "full",
-          "description": "Full Wallet Account Balance Management (Read/Write)"
+          "description": "Setup the full set of Genocs Library functionalities"
         }
       ],
-      "replaces": "use-cases",
+      "replaces": "genocs-components",
       "onlyIf": [
         {
-          "after": "\"use-cases\": \""
+          "after": "\"genocs-components\": \""
         }
       ]
     },
     "full": {
       "type": "computed",
-      "value": "(use-cases == \"full\")"
+      "value": "(genocs-components == \"full\")"
     }
   },
   "sources": [

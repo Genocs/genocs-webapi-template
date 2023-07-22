@@ -2,28 +2,28 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: <<name>>-worker
-  namespace: <<application-namespace>>
+  name: {{name}}-worker
+  namespace: {{application_namespace}}
   labels:
-    app: <<name>>e-worker
-    run: <<name>>-worker
+    app: {{name}}-worker
+    run: {{name}}-worker
 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: <<name>>-worker
+      run: {{name}}-worker
 
   template:
     metadata:
       labels:
-        app: <<name>>-worker
-        run: <<name>>-worker
+        app: {{name}}-worker
+        run: {{name}}-worker
 
     spec:
       containers:
-        - name: <<name>>-worker
-          image: <<your_acr>>.azurecr.io/<<name>>.worker
+        - name: {{name}}-worker
+          image: {{acr_name}}.azurecr.io/{{name}}.worker
           env:
             - name: DOTNET_ENVIRONMENT
               value: "Container"

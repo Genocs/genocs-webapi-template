@@ -1,43 +1,23 @@
-# .NET Core Microservice template 
+# Genocs.WebApiTemplate service  
 
-[![Build status](https://ci.appveyor.com/api/projects/status/0i6s33kw3y87tkb2?svg=true)](https://ci.appveyor.com/project/genocs/genocs-webapi-template)  ![NuGet](https://buildstats.info/nuget/Genocs.WebApiTemplate)  [![All Contributors](https://img.shields.io/badge/all_contributors-1-yellow.svg?style=flat-square)](#contributors)
-<a href="https://www.nuget.org/packages/Genocs.WebApiTemplate/" rel="Genocs.WebApiTemplate"></a>
+[![Build status](https://ci.appveyor.com/api/projects/status/0i6s33kw3y87tkb2?svg=true)](https://ci.appveyor.com/project/genocs/genocs-webapi-template)  ![NuGet](https://buildstats.info/nuget/Genocs.WebApiTemplate) 
 
 
 ## Introduction
 
-Genocs.WebApiTemplate is part of the Genocs.Library project.
+This service was built with [genocs-webapi-template](https://github.com/Genocs/genocs-webapi-template) and is a part of [Genocs Library](https://genocs-blog.netlify.app/).
+
+To get all the information you need to use it: please check
+**[Genocs Library documentation](https://genocs-blog.netlify.app/)**
+
 
 <img src="https://genocs-blog.netlify.app/library/logo_hu5f84e5ac74e01291dbce57bab350d273_35818_2000x0_resize_box_3.png"
      alt="Genocs Library logo"
      style="float: left; margin-right: 10px; padding-bottom: 50px;" />
 
 
-To get all the information you need to use it: please check
-**[Genocs Library documentation](https://genocs-blog.netlify.app/)**
 
 ---
-
-Template for **Microservice Architecture with .NET Core**. Use cases as central organizing structure, decoupled from frameworks and technology details. Built with small components that are developed and tested in isolation.
-
-
-## Usage
-
-```sh
-dotnet new install Genocs.WebApiTemplate::{semver}
-dotnet new gnx-webapi -n "CompanyName.ProjectName.ServiceName"
-```
-
-To get the Genocs WebApi Template updates hit the `WATCH` button.
-
-Would you like to show Genocs WebApi Template on your GitHub profile? Hit the `FORK` button.
-
-Really interested in designing modular applications? Support this project with a hit on the `STAR` button. Share with a friend!
-
-
-Run the Docker container in less than 2 minutes using Play With Docker:
-
-<a href="https://labs.play-with-docker.com/?stack=https://raw.githubusercontent.com/genocs/genocs-webapi-template/master/docker-compose.yml&amp;stack_name=genocs-webapi-template" rel="nofollow"><img src="https://raw.githubusercontent.com/play-with-docker/stacks/master/assets/images/button.png" alt="Try in PWD" style="max-width:100%;"></a>
 
 
 ## Motivation
@@ -156,45 +136,30 @@ Run the following command at the root folder:
 
 The project build two different images. One for the the WebAapi endpoint and one for the worker.   
 
-```sh
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-WORKDIR /app
-
-# Copy everything else and build
-COPY . .
-RUN dotnet publish src/{{CompanyName.ProjectName.ServiceName}}.WebApi -c release -o out
-
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
-WORKDIR /app
-COPY --from=build /app/out .
-ENV ASPNETCORE_URLS http://*:80
-ENV ASPNETCORE_ENVIRONMENT Docker
-ENTRYPOINT dotnet {{CompanyName.ProjectName.ServiceName}}.WebApi.dll
-```
 
 To build the docker images
 
 ``` sh
-# Manual steps 
+# Manual build
 docker build -t company_repo_name/image_name.webapi -f ./webapi.dockerfile .
 docker build -t company_repo_name/image_name.worker -f ./worker.dockerfile .
 
-# by means of Docker compose 
+# Build using docker compose 
 docker compose build -f ./docker-compose.yml
-
-
 ```
 
 
+## Kubernetes
+
+# Add a table
+
+| Variable | Description 
+| -------- | -------- | 
+| {{name}}  | The name of the kubernetes component  | 
+| {{acr_name}} | The name of the Azure container registry | 
+| {{application_namespace}} | The application namespace| 
 
 
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+tbw
 
 

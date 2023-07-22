@@ -47,9 +47,8 @@ To build the package run the following commands:
 
 ``` PowerShell
 cd .\src
-.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version 1.0.{{semver}}
-dotnet new -u Genocs.WebApiTemplate
-dotnet new install Genocs.WebApiTemplate.{{semver}}.nupkg
+.\nuget.exe pack -OutputDirectory nupkgs -NoDefaultExcludes -Version {{semver}}
+dotnet new install .\nupkgs\Genocs.WebApiTemplate.{{semver}}.nupkg
 dotnet new gnx-webapi --help
 dotnet new gnx-webapi --name {{CompanyName.ProjectName.ServiceName}}
 
@@ -58,6 +57,9 @@ dotnet new list
 
 # To get a list of templates that can be removed
 dotnet new -u
+
+# To uninstall the template
+dotnet new uninstall Genocs.WebApiTemplate
 ```
 
 

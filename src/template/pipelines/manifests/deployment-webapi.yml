@@ -2,38 +2,38 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: <<name>>-webapi
-  namespace: <<application-namespace>>
+  name: {{name}}-webapi
+  namespace: {{application_namespace}}
   labels:
-    app: <<name>>-webapi
-    run: <<name>>-webapi
+    app: {{name}}-webapi
+    run: {{name}}-webapi
 
 spec:
   replicas: 1
   selector:
     matchLabels:
-      run: <<name>>-webapi
+      run: {{name}}-webapi
 
   template:
     metadata:
       labels:
-        app: <<name>>-webapi
-        run: <<name>>-webapi
+        app: {{name}}-webapi
+        run: {{name}}-webapi
 
     spec:
       containers:
-        - name: <<name>>-webapi
-          image: <<your_acr>>.azurecr.io/<<name>>.webapi
+        - name: {{name}}-webapi
+          image: {{acr_name}}.azurecr.io/{{name}}.webapi
           env:
             - name: ASPNETCORE_ENVIRONMENT
               value: "Container"
 
           resources:
             requests:
-              cpu: "100m" #50% of a core
+              cpu: "100m" #10% of a core
               memory: "100Mi"
             limits:
-              cpu: "100m" #50% of a core
+              cpu: "100m" #10% of a core
               memory: "100Mi"
           imagePullPolicy: Always
 
