@@ -40,14 +40,43 @@ This is continually updated, open source project.
 
 [Contributions](#contributors-) are welcome!
 
+## <span style="color:red; font-size:xxl">**Work in Progress**</span>
 
-## Persistance layer
 
-This example contains the implementation related to three different storage type:
 
-- InMemoryDataAccess (usefull only for development) 
-- Microsoft SQL Server (The popular Relational database developed by Microsoft) 
-- MongoDB (The popular Document DB) 
+>Before start you have to update some values in the project.
+This is because MongoDB does support database name with the character `.`(period), so you have to change it with another character like `_`(hyphen or undescore character). 
+
+**FROM**
+``` json
+  "mongo": {
+    "connectionString": "mongodb://localhost:27017",
+    "database": "genocs.webapitemplate-service",
+    "seed": false,
+    "enableTracing": true
+  },
+  "mongoDb": {
+    "connectionString": "mongodb://localhost:27017",
+    "database": "genocs.webapitemplate-service",
+    "seed": false
+  },
+```
+
+**TO**
+
+``` json
+  "mongo": {
+    "connectionString": "mongodb://localhost:27017",
+    "database": "name_of_service-service",
+    "seed": false,
+    "enableTracing": true
+  },
+  "mongoDb": {
+    "connectionString": "mongodb://localhost:27017",
+    "database": "name_of_service-service",
+    "seed": false
+  },
+```
 
 ## Containers and orchestrators
 
@@ -137,6 +166,6 @@ Following the list of the variables to update:
 
 | Variable | Description 
 | -------- | -------- | 
-| {{name}}  | The name of the kubernetes component  | 
-| {{acr_name}} | The name of the Azure container registry | 
-| {{application_namespace}} | The application namespace|
+| **{{name}}**  | The name of the kubernetes component  | 
+| **{{acr_name}}** | The name of the Azure container registry | 
+| **{{application_namespace}}** | The application namespace|

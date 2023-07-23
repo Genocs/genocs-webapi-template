@@ -10,6 +10,7 @@ using Genocs.MessageBrokers.Outbox;
 using Genocs.MessageBrokers.Outbox.MongoDB;
 using Genocs.MessageBrokers.RabbitMQ;
 using Genocs.Metrics.Prometheus;
+using Genocs.Monitoring;
 using Genocs.Persistence.MongoDb.Extensions;
 using Genocs.Persistence.Redis;
 using Genocs.Secrets.Vault;
@@ -100,7 +101,7 @@ services.AddCustomMassTransit(builder.Configuration);
 //services.AddOptions();
 
 // Set Custom Open telemetry
-//services.AddCustomOpenTelemetry(builder.Configuration);
+services.AddCustomOpenTelemetry(builder.Configuration);
 
 
 var app = builder.Build();
@@ -128,7 +129,7 @@ app.UseGenocs()
     .UseCertificateAuthentication()
     .UseEndpoints(r => r.MapControllers())
     .UseDispatcherEndpoints(endpoints => endpoints
-        .Get("", ctx => ctx.Response.WriteAsync("Genocs Web Api Template Service"))
+        .Get("", ctx => ctx.Response.WriteAsync("Genocs.WebApiTemplate Service"))
         .Get("ping", ctx => ctx.Response.WriteAsync("pong")))
     //.Get<GetOrder, OrderDto>("orders/{orderId}")
     //.Post<CreateOrder>("orders",
