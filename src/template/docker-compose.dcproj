@@ -3,9 +3,9 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>0db314b3-916f-41c8-8f82-9ba947f03541</ProjectGuid>
+    <ProjectGuid>ebfe1742-4c0a-48c3-875e-aefc1e14e9c4</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/{Scheme}://{ServiceHost}:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>genocs.webapitemplate</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>

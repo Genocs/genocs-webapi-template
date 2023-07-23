@@ -69,26 +69,6 @@ Feel free to submit pull requests to help:
 
 The flow of control begins in the controller, moves through the use case, and then winds up executing in the presenter.
 
-### Register Flow of Control
-
-1. An request in received by the `CustomersController` and an action `Post` is invoked.
-2. The action creates an `RegisterInput` message and the `Register` use case is executed.
-3. The `Register` use case creates a `Customer` and an `Account`. Repositories are called, the `RegisterOutput` message is built and sent to the `RegisterPresenter`.
-4. The `RegisterPresenter` builds the HTTP Response message.
-5. The `CustomersController` asks the presenter the current response.
-
-
-### Get Customer Details Flow of Control
-
-1. An request in received by the `CustomersController` and an action `GetCustomer` is invoked.
-2. The action creates an `GetCustomerDetailsInput` message and the `GetCustomerDetails` use case is executed.
-3. The `GetCustomerDetails` use case asks the repositories about the `Customer` and the `Account`. It could call the `NotFound` or the `Default` port of the `GetCustomerDetailsPresenter` depending if it exists or not.
-4. The `GetCustomerDetailsPresenter` builds the HTTP Response message.
-5. The `CustomersController` asks the presenter the current response.
-
-
-
-
 
 ## Test-Driven Development (TDD)
 
@@ -131,7 +111,6 @@ http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd
 Run the following command at the root folder:
 
 
-
 ## Docker
 
 The project build two different images. One for the the WebAapi endpoint and one for the worker.   
@@ -144,22 +123,20 @@ To build the docker images
 docker build -t company_repo_name/image_name.webapi -f ./webapi.dockerfile .
 docker build -t company_repo_name/image_name.worker -f ./worker.dockerfile .
 
-# Build using docker compose 
-docker compose build -f ./docker-compose.yml
+# Build using docker compose
+# Remember to update the .env file with the correct values
+docker compose -f ./docker-compose.yml build
 ```
 
 
 ## Kubernetes
 
-# Add a table
+The project contains the kubernetes manifest to deploy the application in a kubernetes cluster.
+Remember to update the values in the manifest files before deploying the application.
+Following the list of the variables to update:
 
 | Variable | Description 
 | -------- | -------- | 
 | {{name}}  | The name of the kubernetes component  | 
 | {{acr_name}} | The name of the Azure container registry | 
-| {{application_namespace}} | The application namespace| 
-
-
-tbw
-
-
+| {{application_namespace}} | The application namespace|

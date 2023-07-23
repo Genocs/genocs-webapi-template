@@ -21,7 +21,7 @@ WORKDIR "/src/src/Genocs.WebApiTemplate.WebApi"
 RUN dotnet build "Genocs.WebApiTemplate.WebApi.csproj" -c Release -o /app/build
 
 FROM build-env AS publish
-RUN dotnet publish "Genocs.WebApiTemplate.WebApi.csproj" -c Release -o /app/publish
+RUN dotnet publish "Genocs.WebApiTemplate.WebApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app

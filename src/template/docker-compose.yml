@@ -2,13 +2,13 @@ version: '3.4'
 
 services:
   genocs.webapitemplate.webapi:
-    image: ${DOCKER_REGISTRY-}genocs.webapitemplate.webapi
+    image: ${DOCKER_REGISTRY-}genocs.webapitemplate.webapi:${DOCKER_IMAGE_TAG:-latest}
     build:
       context: .
       dockerfile: webapi.dockerfile
 
   genocs.webapitemplate.worker:
-    image: ${DOCKER_REGISTRY-}genocs.webapitemplate.worker
+    image: ${DOCKER_REGISTRY-}genocs.webapitemplate.worker:${DOCKER_IMAGE_TAG:-latest}
     build:
       context: .
       dockerfile: worker.dockerfile
