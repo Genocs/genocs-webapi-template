@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="5.10.0">
     <id>Genocs.WebApiTemplate</id>
-    <version>1.0.1</version>
+    <version>1.0.4</version>
     <authors>Nocco Giovanni Emanuele</authors>
     <owners>[Genocs] Nocco Giovanni Emanuele</owners>
     <projectUrl>https://github.com/Genocs/genocs-webapi-template</projectUrl>
@@ -22,8 +22,8 @@ Build a solution:
 $ dotnet new gnx-webapi
     </description>
     <releaseNotes>
-- Relesase 1.0.1:
-  Added list of events
+- Relesase 1.0.4:
+  Removed support for Travis CI
   
 - Clean Architecture Principles Documentation
 - .NET Core 7.0
