@@ -45,7 +45,8 @@ This is continually updated, open source project.
 
 
 >Before start you have to update some values in the project.
-This is because MongoDB does support database name with the character `.`(period), so you have to change it with another character like `_`(hyphen or undescore character). 
+
+This is because MongoDB does support database name with the character `.` (period), so you have to change it with another character like `_` (hyphen or undescore character). 
 
 **FROM**
 ``` json
@@ -142,15 +143,15 @@ Run the following command at the root folder:
 
 ## Docker
 
-The project build two different images. One for the the WebAapi endpoint and one for the worker.   
+The project will build two different images. One for the the WebApi endpoint and one for the Background Worker.   
 
 
-To build the docker images
+To build the docker images:
 
 ``` sh
 # Manual build
-docker build -t company_repo_name/image_name.webapi -f ./webapi.dockerfile .
-docker build -t company_repo_name/image_name.worker -f ./worker.dockerfile .
+docker build -t genocs/genocs.webapitemplate.webapi -f ./webapi.dockerfile .
+docker build -t genocs/genocs.webapitemplate.worker -f ./worker.dockerfile .
 
 # Build using docker compose
 # Remember to update the .env file with the correct values

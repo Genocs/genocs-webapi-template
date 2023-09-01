@@ -15,5 +15,3 @@ Content-Type: application/json
 
 ### Get an existing customer
 GET {{url}}/api/v1/Customers/{{customerId}}?{{apiVersion}} HTTP/1.1
-
-
