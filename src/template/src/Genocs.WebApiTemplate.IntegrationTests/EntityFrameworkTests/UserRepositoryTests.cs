@@ -1,4 +1,4 @@
-namespace Genocs.WebApiTemplate.IntegrationTests.EntityFrameworkTests
+namespace Genocs.Library.Template.IntegrationTests.EntityFrameworkTests
 {
     //using Domain.Customers;
     //using Domain.ValueObjects;

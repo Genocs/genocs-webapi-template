@@ -1,4 +1,4 @@
-﻿namespace Genocs.WebApiTemplate.Shared.ReadModels
+﻿namespace Genocs.Library.Template.Shared.ReadModels
 {
     public class SimpleResult
     {

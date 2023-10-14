@@ -1,4 +1,4 @@
-﻿namespace Genocs.WebApiTemplate.Contracts.Commands;
+﻿namespace Genocs.Library.Template.Contracts.Commands;
 
 public interface SubmitOrder
 {

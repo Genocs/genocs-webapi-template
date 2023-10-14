@@ -3,7 +3,7 @@ using Genocs.Core.Domain.Entities.Auditing;
 using Genocs.Core.Domain.Repositories;
 using Genocs.Persistence.MongoDb.Repositories;
 
-namespace Genocs.WebApiTemplate.Domain.Aggregates;
+namespace Genocs.Library.Template.Domain.Aggregates;
 
 [TableMapping("Orders")]
 public class Order : AggregateRoot<Guid>, IMongoDbEntity, IHasCreationTime

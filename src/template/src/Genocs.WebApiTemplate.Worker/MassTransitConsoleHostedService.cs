@@ -1,6 +1,6 @@
 ﻿using MassTransit;
 
-namespace Genocs.WebApiTemplate.Worker;
+namespace Genocs.Library.Template.Worker;
 
 /// <summary>
 /// General purpose worker. Please check the link below for further informations

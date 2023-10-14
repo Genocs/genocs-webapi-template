@@ -1,10 +1,10 @@
-﻿using Genocs.WebApiTemplate.Contracts.Commands;
-using Genocs.WebApiTemplate.WebApi.Models;
+﻿using Genocs.Library.Template.Contracts.Commands;
+using Genocs.Library.Template.WebApi.Models;
 using MassTransit;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
 
-namespace Genocs.WebApiTemplate.WebApi.Controllers;
+namespace Genocs.Library.Template.WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

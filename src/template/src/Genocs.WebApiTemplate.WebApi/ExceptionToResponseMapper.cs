@@ -1,7 +1,7 @@
 ﻿using Genocs.WebApi.Exceptions;
 using System.Net;
 
-namespace Genocs.WebApiTemplate.WebApi;
+namespace Genocs.Library.Template.WebApi;
 
 public class ExceptionToResponseMapper : IExceptionToResponseMapper
 {

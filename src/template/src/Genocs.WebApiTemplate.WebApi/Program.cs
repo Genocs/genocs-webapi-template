@@ -21,8 +21,8 @@ using Genocs.WebApi.CQRS;
 using Genocs.WebApi.Security;
 using Genocs.WebApi.Swagger;
 using Genocs.WebApi.Swagger.Docs;
-using Genocs.WebApiTemplate.WebApi;
-using Genocs.WebApiTemplate.WebApi.Infrastructure.Extensions;
+using Genocs.Library.Template.WebApi;
+using Genocs.Library.Template.WebApi.Infrastructure.Extensions;
 using Serilog;
 using Serilog.Events;
 
@@ -129,7 +129,7 @@ app.UseGenocs()
     .UseCertificateAuthentication()
     .UseEndpoints(r => r.MapControllers())
     .UseDispatcherEndpoints(endpoints => endpoints
-        .Get("", ctx => ctx.Response.WriteAsync("Genocs.WebApiTemplate Service"))
+        .Get("", ctx => ctx.Response.WriteAsync("Genocs.Library.Template Service"))
         .Get("ping", ctx => ctx.Response.WriteAsync("pong")))
     //.Get<GetOrder, OrderDto>("orders/{orderId}")
     //.Post<CreateOrder>("orders",

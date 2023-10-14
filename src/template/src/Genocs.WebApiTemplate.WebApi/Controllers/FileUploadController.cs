@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Genocs.WebApiTemplate.WebApi.Controllers;
+namespace Genocs.Library.Template.WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

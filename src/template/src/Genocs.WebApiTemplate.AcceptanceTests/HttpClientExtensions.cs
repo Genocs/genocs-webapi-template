@@ -1,4 +1,4 @@
-namespace Genocs.WebApiTemplate.AcceptanceTests
+namespace Genocs.Library.Template.AcceptanceTests
 {
     using System.Net.Http;
     using System.Threading.Tasks;

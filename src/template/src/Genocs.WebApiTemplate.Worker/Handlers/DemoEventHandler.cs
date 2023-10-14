@@ -1,7 +1,7 @@
 ﻿using Genocs.Core.CQRS.Events;
-using Genocs.WebApiTemplate.Contracts.Events;
+using Genocs.Library.Template.Contracts.Events;
 
-namespace Genocs.WebApiTemplate.Worker.Handlers;
+namespace Genocs.Library.Template.Worker.Handlers;
 
 public class DemoEventHandler : IEventHandler<DemoEvent>
 {

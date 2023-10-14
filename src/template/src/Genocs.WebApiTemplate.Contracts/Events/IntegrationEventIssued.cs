@@ -1,6 +1,6 @@
 ﻿using Genocs.Core.CQRS.Events;
 
-namespace Genocs.WebApiTemplate.Shared.Events;
+namespace Genocs.Library.Template.Shared.Events;
 
 
 public class IntegrationEventIssued : IEvent

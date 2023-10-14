@@ -1,9 +1,9 @@
 ﻿using Genocs.Persistence.MongoDb.Repositories;
-using Genocs.WebApiTemplate.Contracts.Commands;
-using Genocs.WebApiTemplate.Domain.Aggregates;
+using Genocs.Library.Template.Contracts.Commands;
+using Genocs.Library.Template.Domain.Aggregates;
 using MassTransit;
 
-namespace Genocs.WebApiTemplate.Worker.Consumers;
+namespace Genocs.Library.Template.Worker.Consumers;
 
 public class SubmitOrderConsumer : IConsumer<SubmitOrder>
 {

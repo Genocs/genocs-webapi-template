@@ -1,4 +1,4 @@
-namespace Genocs.WebApiTemplate.WebApi.Models;
+namespace Genocs.Library.Template.WebApi.Models;
 
 public class DemoResult
 {

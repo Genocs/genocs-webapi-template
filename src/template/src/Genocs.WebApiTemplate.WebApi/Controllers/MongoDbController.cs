@@ -1,8 +1,8 @@
 ﻿using Genocs.Persistence.MongoDb.Repositories;
-using Genocs.WebApiTemplate.Domain.Aggregates;
+using Genocs.Library.Template.Domain.Aggregates;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Genocs.WebApiTemplate.WebApi.Controllers;
+namespace Genocs.Library.Template.WebApi.Controllers;
 
 [ApiController]
 [Route("[controller]")]

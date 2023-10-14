@@ -1,4 +1,4 @@
-﻿namespace Genocs.WebApiTemplate.WebApi.Options;
+﻿namespace Genocs.Library.Template.WebApi.Options;
 
 public class RabbitMQSettings
 {

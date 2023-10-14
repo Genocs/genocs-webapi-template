@@ -1,6 +1,6 @@
 ﻿using Genocs.Core.CQRS.Commands;
 
-namespace Genocs.WebApiTemplate.Shared.Commands;
+namespace Genocs.Library.Template.Shared.Commands;
 
 public class SimpleMessage : ICommand
 {

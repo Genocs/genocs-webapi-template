@@ -1,7 +1,7 @@
 ﻿using Genocs.Core.Builders;
 using Genocs.WebApi.Security;
 
-namespace Genocs.WebApiTemplate.WebApi;
+namespace Genocs.Library.Template.WebApi;
 
 public static class Extensions
 {

@@ -1,7 +1,7 @@
 ﻿using Genocs.Core.CQRS.Commands;
-using Genocs.WebApiTemplate.Contracts.Commands;
+using Genocs.Library.Template.Contracts.Commands;
 
-namespace Genocs.WebApiTemplate.Worker.Handlers;
+namespace Genocs.Library.Template.Worker.Handlers;
 
 public class DemoCommandHandler : ICommandHandler<DemoCommand>
 {

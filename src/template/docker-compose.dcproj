@@ -6,7 +6,7 @@
     <ProjectGuid>ebfe1742-4c0a-48c3-875e-aefc1e14e9c4</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/{Scheme}://{ServiceHost}:{ServicePort}</DockerServiceUrl>
-    <DockerServiceName>genocs.webapitemplate</DockerServiceName>
+    <DockerServiceName>genocs.library.template</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
     <None Include="docker-compose.override.yml">

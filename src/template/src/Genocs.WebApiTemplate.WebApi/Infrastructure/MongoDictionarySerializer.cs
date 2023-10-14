@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Serializers;
 using Newtonsoft.Json;
 
-namespace Genocs.WebApiTemplate.WebApi.Infrastructure;
+namespace Genocs.Library.Template.WebApi.Infrastructure;
 
 public class MongoDictionarySerializer : SerializerBase<IDictionary<string, object>>
 {

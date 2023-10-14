@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata minClientVersion="5.10.0">
+    <id>Genocs.Library.Template</id>
+    <version>1.0.0</version>
+    <title>Genocs - Library Web Api Template</title>    
+    <authors>Nocco Giovanni Emanuele</authors>
+    <owners>[Genocs] Nocco Giovanni Emanuele</owners>
+    <projectUrl>https://github.com/Genocs/genocs-library-template</projectUrl>
+    <repository type="git" url="https://github.com/Genocs/genocs-library-template" branch="main" />
+    <license type="expression">MIT</license>
+    <icon>.\content\icon.png</icon>
+    <readme>.\content\README.md</readme>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>2023</copyright>
+    <summary>The .NET template for Genocs Library solution, DDD and Separation of Concerns in Domain, Application, Infrastructure and UI. Separated host for WebApi and Background worker. Docker compose debugging support.</summary>	
+    <description>
+Install the package:
+$ dotnet new -i Genocs.Library.Template
+
+Build a solution:
+$ dotnet new gnx-webapi
+    </description>
+    <releaseNotes>
+- Relesase 1.0.0:
+  
+- Clean Architecture Principles Documentation
+- .NET Core 7.0
+- Swashbuckle 5 
+- Entity Framework Core 5
+- Enterprice Service Bus
+    </releaseNotes>
+    <language>en-US</language>
+    <packageTypes>
+      <packageType name="Template" />
+    </packageTypes>
+    <tags>aggregate architecture boilerplate ddd ddd-architecture design-patterns docker domain-driven-design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template generator layered masstransit microservice microservices rabbitmq service bus solid solid-principles templating tdd webapi</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\README.md" target="content" />
+    <file src="..\icon.png" target="content" />
+    <file src=".\**" target="content" exclude="**\bin\**;**\obj\**;**\.git\**;**\.github\**;**\*.user;**\.vs\**;**\Images\**;**\Logs\**;**\.terraform\**;**\.terraform.lock.hcl;**\terraform.tfstate;**\.nupkg;**\nupkg;;**\assets\**" />
+    <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.log;**\.vscode\**\*;" />
+  </files>
+</package>

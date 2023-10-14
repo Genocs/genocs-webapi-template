@@ -1,7 +1,7 @@
-﻿using Genocs.WebApiTemplate.WebApi.Options;
+﻿using Genocs.Library.Template.WebApi.Options;
 using MassTransit;
 
-namespace Genocs.WebApiTemplate.WebApi.Infrastructure.Extensions;
+namespace Genocs.Library.Template.WebApi.Infrastructure.Extensions;
 
 public static class ServiceCollectionExtensions
 {
