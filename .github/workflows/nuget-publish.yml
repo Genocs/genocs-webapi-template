@@ -21,29 +21,29 @@ on:
 
 jobs:
   build:
-    name: Update NuGet packages
+    name: Update NuGet package
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+    
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
           dotnet-version: 7.0.x
-
+    
       - name: Restore dependencies
-        run: dotnet restore
-
+        run: dotnet restore ./src/template
+    
       - name: Build
-        run: dotnet build -c Debug --no-restore
-
+        run: dotnet build ./src/template --no-restore
+    
       - name: Test
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test ./src/template --no-build --verbosity normal
 
       - name: Pack
         run: dotnet pack -c Debug -o out -p:PackageVersion=${{github.event.inputs.version}} --no-build --verbosity normal
 
-      - name: Push packages to Nuget
+      - name: Push package to Nuget
         run: dotnet nuget push ./out/*.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
