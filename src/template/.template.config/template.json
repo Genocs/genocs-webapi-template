@@ -50,28 +50,28 @@
   ],
   "primaryOutputs": [
     {
-      "path": "src/Genocs.Library.Template.AcceptanceTests/Genocs.Library.Template.AcceptanceTests.csproj"
+      "path": "src/AcceptanceTests/AcceptanceTests.csproj"
     },
     {
-      "path": "src/Genocs.Library.Template.Contracts/Genocs.Library.Template.Contracts.csproj"
+      "path": "src/Contracts/Contracts.csproj"
     },
     {
-      "path": "src/Genocs.Library.Template.Domain/Genocs.Library.Template.Domain.csproj"
+      "path": "src/Domain/Domain.csproj"
     },
     {
-      "path": "src/Genocs.Library.Template.Infrastructure/Genocs.Library.Template.Infrastructure.csproj"
+      "path": "src/Infrastructure/Infrastructure.csproj"
     },
     {
-      "path": "src/Genocs.Library.Template.IntegrationTests/Genocs.Library.Template.IntegrationTests.csproj"
+      "path": "src/IntegrationTests/IntegrationTests.csproj"
     },
     {
-      "path": "src/Genocs.Library.Template.UnitTests/Genocs.Library.Template.UnitTests.csproj"
+      "path": "src/UnitTests/UnitTests.csproj"
     },
     {
-      "path": "src/Genocs.Library.Template.WebApi/Genocs.Library.Template.WebApi.csproj"
+      "path": "src/WebApi/WebApi.csproj"
     },
     {
-      "path": "src/Genocs.Library.Template.Worker/Genocs.Library.Template.Worker.csproj"
+      "path": "src/Worker/Worker.csproj"
     }
   ]
 }

@@ -3,7 +3,6 @@
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
 		<IsPackable>false</IsPackable>
-        <PackageId>Genocs.Library.Template.AcceptanceTests</PackageId>
         <RootNamespace>Genocs.Library.Template.AcceptanceTests</RootNamespace>
         <AssemblyName>Genocs.Library.Template.AcceptanceTests</AssemblyName>
 	</PropertyGroup>
