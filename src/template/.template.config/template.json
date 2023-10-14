@@ -5,14 +5,14 @@
     "Web/ASP.NET"
   ],
   "name": "Genocs: Web Api .NET7",
-  "identity": "Genocs.WebApiTemplate",
-  "groupIdentity": "Genocs.WebApiTemplate",
+  "identity": "Genocs.Library.Template",
+  "groupIdentity": "Genocs.Template",
   "shortName": "gnx-webapi",
   "tags": {
     "type": "project",
-    "language": "C#" // Specify that this template is in C#.
+    "language": "C#"
   },
-  "sourceName": "Genocs.WebApiTemplate", // Will replace the string 'Genocs.WebApiTemplate' with the value provided via -n.
+  "sourceName": "Genocs.Library.Template", // Will replace the string 'Genocs.Library.Template' with the value provided via -n.
   "preferNameDirectory": true,
   "symbols": {
     "genocs-components": {
@@ -50,28 +50,28 @@
   ],
   "primaryOutputs": [
     {
-      "path": "src/Genocs.WebApiTemplate.AcceptanceTests/Genocs.WebApiTemplate.AcceptanceTests.csproj"
+      "path": "src/Genocs.Library.Template.AcceptanceTests/Genocs.Library.Template.AcceptanceTests.csproj"
     },
     {
-      "path": "src/Genocs.WebApiTemplate.Contracts/Genocs.WebApiTemplate.Contracts.csproj"
+      "path": "src/Genocs.Library.Template.Contracts/Genocs.Library.Template.Contracts.csproj"
     },
     {
-      "path": "src/Genocs.WebApiTemplate.Domain/Genocs.WebApiTemplate.Domain.csproj"
+      "path": "src/Genocs.Library.Template.Domain/Genocs.Library.Template.Domain.csproj"
     },
     {
-      "path": "src/Genocs.WebApiTemplate.Infrastructure/Genocs.WebApiTemplate.Infrastructure.csproj"
+      "path": "src/Genocs.Library.Template.Infrastructure/Genocs.Library.Template.Infrastructure.csproj"
     },
     {
-      "path": "src/Genocs.WebApiTemplate.IntegrationTests/Genocs.WebApiTemplate.IntegrationTests.csproj"
+      "path": "src/Genocs.Library.Template.IntegrationTests/Genocs.Library.Template.IntegrationTests.csproj"
     },
     {
-      "path": "src/Genocs.WebApiTemplate.UnitTests/Genocs.WebApiTemplate.UnitTests.csproj"
+      "path": "src/Genocs.Library.Template.UnitTests/Genocs.Library.Template.UnitTests.csproj"
     },
     {
-      "path": "src/Genocs.WebApiTemplate.WebApi/Genocs.WebApiTemplate.WebApi.csproj"
+      "path": "src/Genocs.Library.Template.WebApi/Genocs.Library.Template.WebApi.csproj"
     },
     {
-      "path": "src/Genocs.WebApiTemplate.Worker/Genocs.WebApiTemplate.Worker.csproj"
+      "path": "src/Genocs.Library.Template.Worker/Genocs.Library.Template.Worker.csproj"
     }
   ]
 }

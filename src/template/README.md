@@ -1,6 +1,6 @@
-# Genocs.WebApiTemplate service  
+# Genocs.Library.Template service  
 
-[![Build status](https://ci.appveyor.com/api/projects/status/0i6s33kw3y87tkb2?svg=true)](https://ci.appveyor.com/project/genocs/genocs-webapi-template)  ![NuGet](https://buildstats.info/nuget/Genocs.WebApiTemplate) 
+[![Build status](https://ci.appveyor.com/api/projects/status/0i6s33kw3y87tkb2?svg=true)](https://ci.appveyor.com/project/genocs/genocs-webapi-template)  ![NuGet](https://buildstats.info/nuget/Genocs.Library.Template) 
 
 
 ## Introduction
@@ -52,13 +52,13 @@ This is because MongoDB does support database name with the character `.` (perio
 ``` json
   "mongo": {
     "connectionString": "mongodb://localhost:27017",
-    "database": "genocs.webapitemplate-service",
+    "database": "genocs.library.template-service",
     "seed": false,
     "enableTracing": true
   },
   "mongoDb": {
     "connectionString": "mongodb://localhost:27017",
-    "database": "genocs.webapitemplate-service",
+    "database": "genocs.library.template-service",
     "seed": false
   },
 ```
@@ -150,8 +150,8 @@ To build the docker images:
 
 ``` sh
 # Manual build
-docker build -t genocs/genocs.webapitemplate.webapi -f ./webapi.dockerfile .
-docker build -t genocs/genocs.webapitemplate.worker -f ./worker.dockerfile .
+docker build -t genocs/genocs.library.template.webapi -f ./webapi.dockerfile .
+docker build -t genocs/genocs.library.template.worker -f ./worker.dockerfile .
 
 # Build using docker compose
 # Remember to update the .env file with the correct values

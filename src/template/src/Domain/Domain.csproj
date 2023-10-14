@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<IsPublishable>false</IsPublishable>
+		<IsPackable>false</IsPackable>
+		<PackageId>Genocs.Library.Template.Domain</PackageId>
+		<RootNamespace>Genocs.Library.Template.Domain</RootNamespace>
+		<AssemblyName>Genocs.Library.Template.Domain</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Genocs.Persistence.MongoDb" Version="5.0.0-preview.5.*" />
+		<PackageReference Include="Genocs.Core" Version="5.0.0-preview.5.*" />
+	</ItemGroup>
+    <ItemGroup>
+      <PackageReference Update="Roslynator.Analyzers" Version="4.5.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>
+</Project>
