@@ -9,10 +9,8 @@
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>..\..</DockerfileContext>
 		<DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
-		<PackageId>Genocs.Library.Template.WebApi</PackageId>
 		<RootNamespace>Genocs.Library.Template.WebApi</RootNamespace>
 		<AssemblyName>Genocs.Library.Template.WebApi</AssemblyName>
-
 	</PropertyGroup>
 
 	<ItemGroup>

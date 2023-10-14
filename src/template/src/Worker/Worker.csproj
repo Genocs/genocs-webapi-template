@@ -8,7 +8,6 @@
 		<UserSecretsId>Genocs</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>..\..</DockerfileContext>
-		<PackageId>Genocs.Library.Template.Worker</PackageId>
 		<RootNamespace>Genocs.Library.Template.Worker</RootNamespace>
 		<AssemblyName>Genocs.Library.Template.Worker</AssemblyName>
 	</PropertyGroup>

@@ -65,6 +65,15 @@ The goal of this repository is to help developers/companies kickstart their Web 
 Open up your Command Prompt / PowerShell and run the following command to install the solution template.
 
 ``` bash
+# To build the nuget package
+nuget pack ./src/Package.Template.nuspec -OutputDirectory ./src/nupkgs -Version 1.0.0
+```
+
+``` bash
+```
+
+
+``` bash
 dotnet new --install Genocs.Library.Template
 ```
 

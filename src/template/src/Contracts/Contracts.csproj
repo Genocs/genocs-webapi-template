@@ -6,7 +6,6 @@
 		<Nullable>enable</Nullable>
 		<IsPublishable>false</IsPublishable>
 		<IsPackable>false</IsPackable>
-		<PackageId>Genocs.Library.Template.Contracts</PackageId>
 		<RootNamespace>Genocs.Library.Template.Contracts</RootNamespace>
 		<AssemblyName>Genocs.Library.Template.Contracts</AssemblyName>
 	</PropertyGroup>
