@@ -16,9 +16,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Genocs.Library.Template.Domain\Genocs.Library.Template.Domain.csproj" />
-		<ProjectReference Include="..\..\src\Genocs.Library.Template.Infrastructure\Genocs.Library.Template.Infrastructure.csproj" />
-		<ProjectReference Include="..\..\src\Genocs.Library.Template.WebApi\Genocs.Library.Template.WebApi.csproj" />
+		<ProjectReference Include="..\..\src\Domain\Domain.csproj" />
+		<ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
+		<ProjectReference Include="..\..\src\WebApi\WebApi.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -52,7 +52,7 @@ Built for .NET6.x and .NET7.x. Incorporates the most essential Packages your pro
 
 The goal of this repository is to help developers/companies kickstart their Web Application Development with a pre-built Web Api Template based on Genocs Library nuget Packages. It includes several much needed components and features.
 
-> Note that this is a frontendbackend application only! The frontend for this application is available in a seperate repository. 
+> Note that this is a backend application only! The frontend for this application is available in a seperate repository. 
 > - Find Genocs's .NET Web API template here - [microservice-template](https://github.com/Genocs/microservice-template)
 
 ## Prerequisites
@@ -62,7 +62,7 @@ The goal of this repository is to help developers/companies kickstart their Web 
 
 ## Getting Started
 
-Open up your Command Prompt / Powershell and run the following command to install the solution template.
+Open up your Command Prompt / PowerShell and run the following command to install the solution template.
 
 ``` bash
 dotnet new --install Genocs.Library.Template
@@ -112,7 +112,7 @@ Here are a few ways by which you can support.
 - ☕ If you want to support this project in the long run, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)!
   
 
-[![buy-me-a-coffee](https://raw.githubusercontent.com/Genocs/genocs-library-template/main/assets/buy-me-a-coffee.png "buy-me-a-coffee")](https://www.buymeacoffee.com/genocs)
+[![buy-me-a-coffee](./assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
 
 ## Code Contributors
 

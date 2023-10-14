@@ -11,17 +11,17 @@ WORKDIR /src
 
 
 COPY ["NuGet.config", "."]
-COPY ["src/Genocs.Library.Template.WebApi/Genocs.Library.Template.WebApi.csproj", "src/Genocs.Library.Template.WebApi/"]
-COPY ["src/Genocs.Library.Template.Domain/Genocs.Library.Template.Domain.csproj", "src/Genocs.Library.Template.Domain/"]
-COPY ["src/Genocs.Library.Template.Contracts/Genocs.Library.Template.Contracts.csproj", "src/Genocs.Library.Template.Contracts/"]
-COPY ["src/Genocs.Library.Template.Infrastructure/Genocs.Library.Template.Infrastructure.csproj", "src/Genocs.Library.Template.Infrastructure/"]
-RUN dotnet restore "src/Genocs.Library.Template.WebApi/Genocs.Library.Template.WebApi.csproj"
+COPY ["src/WebApi/WebApi.csproj", "WebApi/"]
+COPY ["src/Domain/Domain.csproj", "Domain/"]
+COPY ["src/Contracts/Contracts.csproj", "Contracts/"]
+COPY ["src/Infrastructure/Infrastructure.csproj", "Infrastructure/"]
+RUN dotnet restore "WebApi/WebApi.csproj"
 COPY . .
-WORKDIR "/src/src/Genocs.Library.Template.WebApi"
-RUN dotnet build "Genocs.Library.Template.WebApi.csproj" -c Release -o /app/build
+WORKDIR "/src/WebApi"
+RUN dotnet build "WebApi.csproj" -c Release -o /app/build
 
 FROM build-env AS publish
-RUN dotnet publish "Genocs.Library.Template.WebApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "WebApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app

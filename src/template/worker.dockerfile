@@ -8,17 +8,17 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
 WORKDIR /src
 COPY ["NuGet.config", "."]
-COPY ["src/Genocs.Library.Template.Worker/Genocs.Library.Template.Worker.csproj", "src/Genocs.Library.Template.Worker/"]
-COPY ["src/Genocs.Library.Template.Domain/Genocs.Library.Template.Domain.csproj", "src/Genocs.Library.Template.Domain/"]
-COPY ["src/Genocs.Library.Template.Contracts/Genocs.Library.Template.Contracts.csproj", "src/Genocs.Library.Template.Contracts/"]
-COPY ["src/Genocs.Library.Template.Infrastructure/Genocs.Library.Template.Infrastructure.csproj", "src/Genocs.Library.Template.Infrastructure/"]
-RUN dotnet restore "src/Genocs.Library.Template.Worker/Genocs.Library.Template.Worker.csproj"
+COPY ["src/Worker/Worker.csproj", "Worker/"]
+COPY ["src/Domain/Domain.csproj", "Domain/"]
+COPY ["src/Contracts/Contracts.csproj", "Contracts/"]
+COPY ["src/Infrastructure/Infrastructure.csproj", "Infrastructure/"]
+RUN dotnet restore "Worker/Worker.csproj"
 COPY . .
-WORKDIR "/src/src/Genocs.Library.Template.Worker"
-RUN dotnet build "Genocs.Library.Template.Worker.csproj" -c Release -o /app/build
+WORKDIR "/src/Worker"
+RUN dotnet build "Worker.csproj" -c Release -o /app/build
 
 FROM build-env AS publish
-RUN dotnet publish "Genocs.Library.Template.Worker.csproj" -c Release -o /app/publish
+RUN dotnet publish "Worker.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
