@@ -13,28 +13,21 @@
     <readme>.\content\README.md</readme>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>2023</copyright>
-    <summary>The .NET template for Genocs Library solution, DDD and Separation of Concerns in Domain, Application, Infrastructure and UI. Separated host for WebApi and Background worker. Docker compose debugging support.</summary>	
-    <description>
-Install the package:
-$ dotnet new -i Genocs.Library.Template
-
-Build a solution:
-$ dotnet new gnx-webapi
-    </description>
+    <summary>The .NET template for Genocs Library. Implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</summary>	
+    <description>The .NET template to implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</description>
     <releaseNotes>
-- Relesase 1.0.0:
-  
+Relesase 1.0.0:
 - Clean Architecture Principles Documentation
-- .NET Core 7.0
+- .NET7.x
 - Swashbuckle 5 
-- Entity Framework Core 5
-- Enterprice Service Bus
+- MongoDb as persistence layer
+- Mass Transit and RabbitMQ as Enterprice Service Bus
     </releaseNotes>
     <language>en-US</language>
     <packageTypes>
       <packageType name="Template" />
     </packageTypes>
-    <tags>aggregate architecture boilerplate ddd ddd-architecture design-patterns docker domain-driven-design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template generator layered masstransit microservice microservices rabbitmq service bus solid solid-principles templating tdd webapi</tags>
+    <tags>aggregate architecture boilerplate ddd design-patterns docker domain driven design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template generator layered masstransit microservice microservices rabbitmq service bus solid solid-principles templating tdd webapi</tags>
     <dependencies>
     </dependencies>
   </metadata>
