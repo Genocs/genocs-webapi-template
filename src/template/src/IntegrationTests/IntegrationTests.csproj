@@ -3,6 +3,9 @@
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
 		<IsPackable>false</IsPackable>
+		<PackageId>Genocs.Library.Template.IntegrationTests</PackageId>
+		<RootNamespace>Genocs.Library.Template.IntegrationTests</RootNamespace>
+		<AssemblyName>Genocs.Library.Template.IntegrationTests</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -16,7 +19,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Genocs.Library.Template.Domain\Genocs.Library.Template.Domain.csproj" />
-		<ProjectReference Include="..\..\src\Genocs.Library.Template.Infrastructure\Genocs.Library.Template.Infrastructure.csproj" />
+		<ProjectReference Include="..\..\src\Domain\Domain.csproj" />
+		<ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
 	</ItemGroup>
+    <ItemGroup>
+      <PackageReference Update="Roslynator.Analyzers" Version="4.5.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>	
 </Project>

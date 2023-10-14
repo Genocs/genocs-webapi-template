@@ -8,6 +8,9 @@
 		<UserSecretsId>Genocs</UserSecretsId>
 		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<DockerfileContext>..\..</DockerfileContext>
+		<PackageId>Genocs.Library.Template.Worker</PackageId>
+		<RootNamespace>Genocs.Library.Template.Worker</RootNamespace>
+		<AssemblyName>Genocs.Library.Template.Worker</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -28,9 +31,14 @@
 		<PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
 	</ItemGroup>
 
-
 	<ItemGroup>
-		<ProjectReference Include="..\Genocs.Library.Template.Contracts\Genocs.Library.Template.Contracts.csproj" />
-		<ProjectReference Include="..\Genocs.Library.Template.Domain\Genocs.Library.Template.Domain.csproj" />
+		<ProjectReference Include="..\Contracts\Contracts.csproj" />
+		<ProjectReference Include="..\Domain\Domain.csproj" />
 	</ItemGroup>
+    <ItemGroup>
+      <PackageReference Update="Roslynator.Analyzers" Version="4.5.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>	
 </Project>

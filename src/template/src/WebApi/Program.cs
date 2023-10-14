@@ -156,7 +156,7 @@ app.UseGenocs()
 
 //app.MapControllers();
 
-//app.MapHealthChecks("/healthz");
+//app.MapHealthChecks("/hc");
 
 app.Run();
 

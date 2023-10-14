@@ -3,6 +3,9 @@
 	<PropertyGroup>
 		<TargetFramework>net7.0</TargetFramework>
 		<IsPackable>false</IsPackable>
+        <PackageId>Genocs.Library.Template.AcceptanceTests</PackageId>
+        <RootNamespace>Genocs.Library.Template.AcceptanceTests</RootNamespace>
+        <AssemblyName>Genocs.Library.Template.AcceptanceTests</AssemblyName>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -20,7 +23,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\src\Genocs.Library.Template.WebApi\Genocs.Library.Template.WebApi.csproj" />
+		<ProjectReference Include="..\..\src\WebApi\WebApi.csproj" />
 	</ItemGroup>
+    <ItemGroup>
+      <PackageReference Update="Roslynator.Analyzers" Version="4.5.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+    </ItemGroup>	
 
 </Project>
