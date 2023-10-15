@@ -40,10 +40,7 @@
 [twitterx-shield]: https://img.shields.io/twitter/url/https/twitter.com/genocs.svg?style=social
 [twitterx-url]: https://twitter.com/genocs
 
-
-<p align="center">
-    <img src="https://raw.githubusercontent.com/Genocs/genocs-library-template/main/assets/genocs-library-logo.png" alt="icon">
-</p>
+[![logo](https://raw.githubusercontent.com/Genocs/genocs-library-template/main/assets/genocs-library-logo.png "logo")](https://github.com/Genocs/genocs-library-template)
 
 # Genocs Library Template 
 This is the template to be used for scaffolding .NET6 and .NET7 Web Api solution with Genocs Library. It incorporates the most essential Packages your projects will need. You can use it as a starting point for your projects.
