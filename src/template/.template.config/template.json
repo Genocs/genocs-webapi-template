@@ -2,7 +2,9 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Nocco Giovanni Emanuele",
   "classifications": [
-    "Web/ASP.NET"
+    "Web",
+    "WebApi",
+    "Genocs"
   ],
   "name": "Genocs: Web Api .NET7",
   "identity": "Genocs.Library.Template",
@@ -21,6 +23,10 @@
       "defaultValue": "full",
       "choices": [
         {
+          "choice": "bare",
+          "description": "Minimum set of dependencies"
+        },
+        {
           "choice": "full",
           "description": "Setup the full set of Genocs Library functionalities"
         }
@@ -32,6 +38,10 @@
         }
       ]
     },
+    "bare": {
+      "type": "computed",
+      "value": "(genocs-components == \"bare\")"
+    },    
     "full": {
       "type": "computed",
       "value": "(genocs-components == \"full\")"
@@ -42,10 +52,14 @@
       "source": "./",
       "modifiers": [
         {
-          "condition": "(Full)",
+          "condition": "(bare)",
+          "exclude": []
+        },
+        {
+          "condition": "(full)",
           "exclude": []
         }
-      ]
+      ]      
     }
   ],
   "primaryOutputs": [

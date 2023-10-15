@@ -43,7 +43,7 @@ jobs:
         run: dotnet test ./src/template --no-build --verbosity normal
 
       - name: Pack
-        run: nuget pack ./src/Package.Template.nuspec -OutputDirectory ./out -Version ${{github.event.inputs.version}}
+        run: nuget pack ./src/Package.Template.nuspec -NoDefaultExcludes -OutputDirectory ./out -Version ${{github.event.inputs.version}}
 
       - name: Push package to Nuget
         run: dotnet nuget push ./out/*.nupkg -k ${{secrets.NUGET_API_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate --no-symbols
