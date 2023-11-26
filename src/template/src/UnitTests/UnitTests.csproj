@@ -1,37 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
-		<IsPackable>false</IsPackable>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
-		<PackageReference Include="xunit" Version="2.4.1" />
-		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
-			<PrivateAssets>all</PrivateAssets>
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<ProjectReference Include="..\..\src\Domain\Domain.csproj" />
-		<ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
-		<ProjectReference Include="..\..\src\WebApi\WebApi.csproj" />
-	</ItemGroup>
-
-	<ItemGroup>
-		<Folder Include="EntitiesTests\" />
-		<Folder Include="InputValidationTests\" />
-		<Folder Include="PresenterTests\" />
-		<Folder Include="TestFixtures\" />
-		<Folder Include="UseCaseTests\" />
-	</ItemGroup>
     <ItemGroup>
-      <PackageReference Update="Roslynator.Analyzers" Version="4.5.0">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+        <PackageReference Include="xunit" Version="2.6.2" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.5.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
     </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Domain\Domain.csproj" />
+        <ProjectReference Include="..\..\src\Infrastructure\Infrastructure.csproj" />
+        <ProjectReference Include="..\..\src\WebApi\WebApi.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="EntitiesTests\" />
+        <Folder Include="InputValidationTests\" />
+        <Folder Include="PresenterTests\" />
+        <Folder Include="TestFixtures\" />
+        <Folder Include="UseCaseTests\" />
+    </ItemGroup>
+
 </Project>
