@@ -34,13 +34,11 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateLogger();
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host
         .UseLogging()
         .UseVault();
-
 
 var services = builder.Services;
 
@@ -53,7 +51,7 @@ services.AddGenocs()
         .AddFabio()
         .AddJaeger()
         .AddMongo()
-        //.AddMongoRepository<Product, Guid>("products")
+        // .AddMongoRepository<Product, Guid>("products")
         .AddCommandHandlers()
         .AddEventHandlers()
         .AddQueryHandlers()
@@ -97,15 +95,12 @@ services.AddGenocs()
 // Add Masstransit bus configuration
 services.AddCustomMassTransit(builder.Configuration);
 
-
-//services.AddOptions();
+// services.AddOptions();
 
 // Set Custom Open telemetry
 services.AddCustomOpenTelemetry(builder.Configuration);
 
-
 var app = builder.Build();
-
 
 // START: TO be Refactory
 
@@ -117,9 +112,7 @@ var app = builder.Build();
 //    app.UseSwaggerUI();
 //}
 
-
 // END: TO be Refactory
-
 
 app.UseGenocs()
     .UserCorrelationContextLogging()
@@ -139,24 +132,22 @@ app.UseGenocs()
     .UseRabbitMq();
 //    .SubscribeEvent<DeliveryStarted>();
 
-
-//// global cors policy
-//app.UseCors(x => x
+// global cors policy
+// app.UseCors(x => x
 //    .SetIsOriginAllowed(origin => true)
 //    .AllowAnyMethod()
 //    .AllowAnyHeader()
 //    .AllowCredentials());
 
+// app.UseHttpsRedirection();
 
-//app.UseHttpsRedirection();
+// app.UseRouting();
 
-//app.UseRouting();
+// app.UseAuthorization();
 
-//app.UseAuthorization();
+// app.MapControllers();
 
-//app.MapControllers();
-
-//app.MapHealthChecks("/hc");
+// app.MapHealthChecks("/hc");
 
 app.Run();
 

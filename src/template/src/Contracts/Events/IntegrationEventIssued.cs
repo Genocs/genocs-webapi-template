@@ -2,8 +2,7 @@
 
 namespace Genocs.Library.Template.Shared.Events;
 
-
 public class IntegrationEventIssued : IEvent
 {
-    public string Title { get; set; }
+    public string? Title { get; set; }
 }

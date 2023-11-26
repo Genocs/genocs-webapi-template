@@ -1,7 +1,9 @@
-﻿namespace Genocs.Library.Template.Shared.ReadModels
+﻿namespace Genocs.Library.Template.Shared.ReadModels;
+
+public class SimpleResult
 {
-    public class SimpleResult
-    {
-        public string MessageId { get; set; }
-    }
+    /// <summary>
+    /// The Message Id
+    /// </summary>
+    public string? MessageId { get; set; }
 }

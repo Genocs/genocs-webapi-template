@@ -15,12 +15,13 @@ public static class ServiceCollectionExtensions
 
         services.AddMassTransit(x =>
         {
-            //x.AddConsumersFromNamespaceContaining<MerchantStatusChangedEvent>();
+            // x.AddConsumersFromNamespaceContaining<MerchantStatusChangedEvent>();
 
             x.UsingRabbitMq((context, cfg) =>
             {
                 cfg.ConfigureEndpoints(context);
-                //cfg.UseHealthCheck(context);
+
+                // cfg.UseHealthCheck(context);
                 cfg.Host(rabbitMQSettings.HostName, rabbitMQSettings.VirtualHost,
                     h =>
                     {
