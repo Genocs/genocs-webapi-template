@@ -1,2 +1,9 @@
 #!/bin/bash
-dotnet build ../src/Genocs.Library.Template -c release
+MYGET_ENV=""
+case "$TRAVIS_BRANCH" in
+  "master")
+    MYGET_ENV="-dev"
+    ;;
+esac
+
+dotnet build -c release

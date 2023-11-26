@@ -1,18 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-	<PropertyGroup>
-		<TargetFramework>net7.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-		<Nullable>enable</Nullable>
-		<IsPublishable>false</IsPublishable>
-		<IsPackable>false</IsPackable>
-		<RootNamespace>Genocs.Library.Template.Infrastructure</RootNamespace>
-		<AssemblyName>Genocs.Library.Template.Infrastructure</AssemblyName>
-	</PropertyGroup>
-    <ItemGroup>
-      <PackageReference Update="Roslynator.Analyzers" Version="4.5.0">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-    </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <IsPublishable>false</IsPublishable>
+        <IsPackable>false</IsPackable>
+        <RootNamespace>Genocs.Library.Template.Infrastructure</RootNamespace>
+        <AssemblyName>Genocs.Library.Template.Infrastructure</AssemblyName>
+    </PropertyGroup>
+
 </Project>

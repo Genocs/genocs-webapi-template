@@ -56,7 +56,6 @@ public class ServiceBusMassTransitController : ControllerBase
         return Accepted("Sent");
     }
 
-
     //[HttpPost("SubmitOrder")]
     //public async Task<IActionResult> PostSubmitOrder()
     //{
@@ -93,7 +92,6 @@ public class ServiceBusMassTransitController : ControllerBase
     //    //var r = _mutexRepository.InsertOne(mutex);
 
     //    //_mutexRepository.ReplaceOne(updateFilter, mutex);
-
 
     //    //await _azureServiceBusTopic.PublishAsync(new DemoEvent("demo event 1 subscription", "address"), filters);
 
