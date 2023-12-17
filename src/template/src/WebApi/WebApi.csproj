@@ -2,13 +2,10 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         <DockerTargetOS>Linux</DockerTargetOS>
         <UserSecretsId>_Genocs</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <DockerfileContext>..\..</DockerfileContext>
-        <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
         <RootNamespace>Genocs.Library.Template.WebApi</RootNamespace>
         <AssemblyName>Genocs.Library.Template.WebApi</AssemblyName>
     </PropertyGroup>

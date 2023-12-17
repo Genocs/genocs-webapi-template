@@ -43,7 +43,7 @@
 [![logo](https://raw.githubusercontent.com/Genocs/genocs-library-template/main/assets/genocs-library-logo.png "logo")](https://github.com/Genocs/genocs-library-template)
 
 # Genocs Library Template 
-This is the template to be used for scaffolding .NET6 and .NET7 Web Api solution with Genocs Library. It incorporates the most essential Packages your projects will need. You can use it as a starting point for your projects.
+This is the template to be used for scaffolding .NET8 Web Api solution with Genocs Library. It incorporates the most essential Packages your projects will need. You can use it as a starting point for your projects.
 
 The template can be used with the `dotnet new` command or with the `Visual Studio 2022` or `Visual Studio Code` IDEs.
 

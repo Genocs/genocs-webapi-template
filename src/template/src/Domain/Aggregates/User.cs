@@ -1,6 +1,7 @@
 ﻿using Genocs.Core.Domain.Entities.Auditing;
 using Genocs.Core.Domain.Repositories;
-using Genocs.Persistence.MongoDb.Repositories;
+using Genocs.Persistence.MongoDb.Repositories.Clean;
+using MongoDB.Bson;
 
 namespace Genocs.Library.Template.Domain.Aggregates;
 
@@ -8,7 +9,7 @@ namespace Genocs.Library.Template.Domain.Aggregates;
 public class User : IMongoDbEntity, IHasCreationTime
 {
 
-    public Guid Id { get; set; }
+    public ObjectId Id { get; set; }
     public string UserId { get; set; } = default!;
     public DateTime CreationTime { get; set; } = DateTime.UtcNow;
     public string Username { get; set; } = default!;
@@ -17,7 +18,7 @@ public class User : IMongoDbEntity, IHasCreationTime
 
     public User(string userId, string username, decimal age, string country)
     {
-        Id = Guid.NewGuid();
+        Id = ObjectId.GenerateNewId();
         UserId = userId;
         Username = username;
         Age = age;

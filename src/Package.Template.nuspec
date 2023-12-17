@@ -13,12 +13,12 @@
     <readme>.\content\README_NUGET.md</readme>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>2023</copyright>
-    <summary>.NET7 template for Genocs Library. Implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</summary>	
-    <description>.NET7 template to implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</description>
+    <summary>.NET8 template for Genocs Library. Implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</summary>	
+    <description>.NET8 template to implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</description>
     <releaseNotes>
-Relesase 1.0.0:
+Relesase 1.1.0:
 - Clean Architecture Principles Documentation
-- .NET7.x
+- .NET8.x
 - Swashbuckle 5 
 - MongoDb as persistence layer
 - Mass Transit and RabbitMQ as Enterprice Service Bus

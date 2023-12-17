@@ -1,12 +1,14 @@
-﻿using Genocs.Core.Domain.Entities;
+﻿using Genocs.Common.Types;
+using Genocs.Core.Domain.Entities;
 using Genocs.Core.Domain.Entities.Auditing;
 using Genocs.Core.Domain.Repositories;
-using Genocs.Persistence.MongoDb.Repositories;
+using Genocs.Persistence.MongoDb.Repositories.Clean;
+using MongoDB.Bson;
 
 namespace Genocs.Library.Template.Domain.Aggregates;
 
 [TableMapping("Orders")]
-public class Order : AggregateRoot<Guid>, IMongoDbEntity, IHasCreationTime
+public class Order : AggregateRoot<ObjectId>, IMongoDbEntity, IHasCreationTime
 {
     public Order(string orderId, string userId, string cardToken, decimal amount, string currency)
     {

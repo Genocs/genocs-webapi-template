@@ -7,6 +7,8 @@ public sealed class UserRepositoryTests
     [Fact]
     public async Task AddChangesDatabaseAsync()
     {
+        await Task.CompletedTask;
+
         //        var options = new DbContextOptionsBuilder<GenocsContext>()
         //            .UseInMemoryDatabase(databaseName: "test_database")
         //            .Options;

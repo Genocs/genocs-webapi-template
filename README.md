@@ -46,7 +46,7 @@
 </p>
 
 # Genocs Library Template 
-Built for .NET6.x and .NET7.x. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles.
+Built for .NET8. Incorporates the most essential Packages your projects will ever need. Follows Clean Architecture Principles.
 
 ## Goals
 
@@ -56,10 +56,7 @@ The goal of this repository is to help developers/companies kickstart their Web 
 > - Find Genocs's .NET Web API template here - [genocs-library-template](https://github.com/Genocs/genocs-library-template)
 
 ## Prerequisites
-- [.NET 6.x](https://dotnet.microsoft.com/download/dotnet/6.0)
-or
-- [.NET 7.x](https://dotnet.microsoft.com/download/dotnet/7.0)
-
+- [.NET 8.x](https://dotnet.microsoft.com/download/dotnet/8.0)
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/preview/vs2022/)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 

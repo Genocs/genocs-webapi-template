@@ -50,12 +50,6 @@ This is because MongoDB does support database name with the character `.` (perio
 
 **FROM**
 ``` json
-  "mongo": {
-    "connectionString": "mongodb://localhost:27017",
-    "database": "genocs.library.template-service",
-    "seed": false,
-    "enableTracing": true
-  },
   "mongoDb": {
     "connectionString": "mongodb://localhost:27017",
     "database": "genocs.library.template-service",
@@ -66,12 +60,6 @@ This is because MongoDB does support database name with the character `.` (perio
 **TO**
 
 ``` json
-  "mongo": {
-    "connectionString": "mongodb://localhost:27017",
-    "database": "name_of_service-service",
-    "seed": false,
-    "enableTracing": true
-  },
   "mongoDb": {
     "connectionString": "mongodb://localhost:27017",
     "database": "name_of_service-service",
@@ -161,12 +149,12 @@ docker compose -f ./docker-compose.yml build
 
 ## Kubernetes
 
-The project contains the kubernetes manifest to deploy the application in a kubernetes cluster.
+The project contains the Kubernetes manifest to deploy the application in a Kubernetes cluster.
 Remember to update the values in the manifest files before deploying the application.
 Following the list of the variables to update:
 
 | Variable | Description 
 | -------- | -------- | 
-| **{{name}}**  | The name of the kubernetes component  | 
+| **{{name}}**  | The name of the Kubernetes component  | 
 | **{{acr_name}}** | The name of the Azure container registry | 
 | **{{application_namespace}}** | The application namespace|

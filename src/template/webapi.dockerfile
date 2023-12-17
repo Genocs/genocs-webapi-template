@@ -1,20 +1,27 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
 
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /src
 
-
-COPY ["NuGet.config", "."]
 COPY ["src/WebApi/WebApi.csproj", "WebApi/"]
 COPY ["src/Domain/Domain.csproj", "Domain/"]
 COPY ["src/Contracts/Contracts.csproj", "Contracts/"]
 COPY ["src/Infrastructure/Infrastructure.csproj", "Infrastructure/"]
+
+COPY ["NuGet.config", "."]
+COPY ["Directory.Build.props", "Directory.Build.props"]
+COPY ["Directory.Build.targets", "Directory.Build.targets"]
+COPY ["stylecop.json", "stylecop.json"]
+COPY ["launchSettings.json", "launchSettings.json"]
+COPY ["global.json", "global.json"]
+
+
 RUN dotnet restore "WebApi/WebApi.csproj"
 COPY . .
 WORKDIR "/src/WebApi"

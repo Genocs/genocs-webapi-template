@@ -6,10 +6,10 @@
     "WebApi",
     "Genocs"
   ],
-  "name": "Genocs: Web Api .NET7",
+  "name": "Genocs: Microservice with library for .NET8",
   "identity": "Genocs.Library.Template",
   "groupIdentity": "Genocs.Template",
-  "shortName": "gnx-webapi",
+  "shortName": "gnx-librawebapi",
   "tags": {
     "type": "project",
     "language": "C#"
