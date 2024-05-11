@@ -10,8 +10,8 @@ public static class Extensions
         builder.AddCertificateAuthentication();
 
         // TODO: Add your services here
-        //builder.Services.AddSingleton<IOrderServiceClient, OrderServiceClient>();
-        //builder.Services.AddSingleton<IProductServiceClient, ProductServiceClient>();
+        // builder.Services.AddSingleton<IOrderServiceClient, OrderServiceClient>();
+        // builder.Services.AddSingleton<IProductServiceClient, ProductServiceClient>();
         return builder;
     }
 }

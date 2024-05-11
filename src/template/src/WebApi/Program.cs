@@ -72,7 +72,6 @@ services.AddGenocs()
 //services.AddMongoDatabase(builder.Configuration);
 //services.RegisterRepositories(Assembly.GetExecutingAssembly());
 
-
 //services.AddCors();
 //services.AddControllers().AddJsonOptions(x =>
 //{
@@ -104,7 +103,6 @@ var app = builder.Build();
 
 // START: TO be Refactory
 
-
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{
@@ -122,7 +120,7 @@ app.UseGenocs()
     .UseCertificateAuthentication()
     .UseEndpoints(r => r.MapControllers())
     .UseDispatcherEndpoints(endpoints => endpoints
-        .Get("", ctx => ctx.Response.WriteAsync("Genocs.Library.Template Service"))
+        .Get(string.Empty, ctx => ctx.Response.WriteAsync("Genocs.Library.Template Service"))
         .Get("ping", ctx => ctx.Response.WriteAsync("pong")))
     //.Get<GetOrder, OrderDto>("orders/{orderId}")
     //.Post<CreateOrder>("orders",

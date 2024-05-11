@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata minClientVersion="5.10.0">
     <id>Genocs.Library.Template</id>
-    <version>1.0.0</version>
-    <title>Genocs - Library Web Api Template</title>    
+    <version>1.1.0</version>
+    <title>Genocs - Library Web Api Template</title>
     <authors>Nocco Giovanni Emanuele</authors>
     <owners>[Genocs] Nocco Giovanni Emanuele</owners>
     <projectUrl>https://github.com/Genocs/genocs-library-template</projectUrl>
@@ -12,16 +12,16 @@
     <icon>.\content\icon.png</icon>
     <readme>.\content\README_NUGET.md</readme>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <copyright>2023</copyright>
-    <summary>.NET8 template for Genocs Library. Implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</summary>	
-    <description>.NET8 template to implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</description>
+    <copyright>2024</copyright>
+    <summary>.NET8 Genocs Library Template to implement solution base on Genocs Library.</summary>	
+    <description>.NET8 template designed for Genocs Library 5.x. It can be used to implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</description>
     <releaseNotes>
-Relesase 1.1.0:
+Relesase 1.0.7:
 - Clean Architecture Principles Documentation
 - .NET8.x
 - Swashbuckle 5 
-- MongoDb as persistence layer
-- Mass Transit and RabbitMQ as Enterprice Service Bus
+- MongoDb persistence layer
+- MassTransit with RabbitMQ Enterprice Service Bus
     </releaseNotes>
     <language>en-US</language>
     <packageTypes>

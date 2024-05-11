@@ -70,7 +70,7 @@ Open up your *Command Prompt*/*PowerShell* or *bash* and run the following comma
 
 ``` bash
 # To install the template
-dotnet new --install Genocs.Library.Template
+dotnet new -install Genocs.Library.Template
 ```
 
 or, 
@@ -80,7 +80,7 @@ if you want to use a specific version of the template,
 use
 
 ``` bash
-dotnet new --install Genocs.Library.Template::0.0.1
+dotnet new -install Genocs.Library.Template::0.0.1
 ```
 
 This would install the `Genocs Library Web Api Template` globally on your machine.

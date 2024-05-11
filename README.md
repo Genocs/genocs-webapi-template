@@ -57,25 +57,27 @@ The goal of this repository is to help developers/companies kickstart their Web 
 
 ## Prerequisites
 - [.NET 8.x](https://dotnet.microsoft.com/download/dotnet/8.0)
-- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/preview/vs2022/)
-- [Visual Studio Code](https://code.visualstudio.com/download)
+
+- [Visual Studio 2022](https://visualstudio.microsoft.com/vs/preview/vs2022/)(optional)
+- [Visual Studio Code](https://code.visualstudio.com/download)(optional)
+- [Rider](https://www.jetbrains.com/rider/)(optional)
 
 
 ## Getting Started
 
-Open up your "Command Prompt"/"PowerShell" or "bash prompt" and run the following command.
+Open up your *Command Prompt* or *PowerShell* or "bash" and run the following command.
 
 ``` bash
 # To clone the repository
 git clone https://github.com/Genocs/genocs-library-template
 # To build the nuget package
-nuget pack ./src/Package.Template.nuspec -NoDefaultExcludes -OutputDirectory ./out -Version 1.0.0
+nuget pack ./src/Package.Template.nuspec -NoDefaultExcludes -OutputDirectory ./out -Version 1.1.0
 ```
 
 
 ``` bash
 # To install the template
-dotnet new --install Genocs.Library.Template
+dotnet new install Genocs.Library.Template
 ```
 
 or, 
@@ -85,10 +87,10 @@ if you want to use a specific version of the template,
 use
 
 ``` bash
-dotnet new --install Genocs.Library.Template::0.0.1
+dotnet new install Genocs.Library.Template::0.1.1
 ```
 
-This would install the `Genocs Library Web Api Template` globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **0.0.1** which is also one of the first stable release version of the package. It is highly likely that there is already a newer version available when you are reading this.
+This would install the `Genocs Library Web Api Template` globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **1.1.0** which is also one of the first stable release version of the package. It is highly likely that there is already a newer version available when you are reading this.
 
 > *To get the latest version of the package, visit [nuget.org](https://www.nuget.org/packages/Genocs.Library.Template/)*
 >
@@ -119,7 +121,7 @@ Here are a few ways by which you can support.
 - ⭐ Leave a star!
 - 🥇 Recommend this project to your colleagues.
 - 🦸 Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn](https://www.linkedin.com/in/giovanni-emanuele-nocco-b31a5169/) 
-- ☕ If you want to support this project in the long run, [consider buying me a coffee](https://www.buymeacoffee.com/genocs)!
+- ☕ If you want to support this project in the long run, consider [buying me a coffee](https://www.buymeacoffee.com/genocs)!
   
 
 [![buy-me-a-coffee](./assets/buy-me-a-coffee.png "buy me a coffee")](https://www.buymeacoffee.com/genocs)
@@ -132,7 +134,9 @@ This project exists thanks to all the people who contribute. [Submit your PR and
 
 ## Financial Contributors
 
-Become a financial contributor and help me sustain the project. [Support the Project!](https://opencollective.com/genocs/contribute)
+Become a financial contributor and help me sustain the project.
+
+**Support the Project** on [Opencollective](https://opencollective.com/genocs)
 
 <a href="https://opencollective.com/genocs"><img src="https://opencollective.com/genocs/individuals.svg?width=890"></a>
 

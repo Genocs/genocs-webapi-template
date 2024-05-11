@@ -2,16 +2,14 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Nocco Giovanni Emanuele",
   "classifications": [
-    "Web",
-    "WebApi",
-    "Genocs"
+    "Web/ASP.NET"
   ],
   "name": "Genocs: Microservice with library for .NET8",
   "identity": "Genocs.Library.Template",
   "groupIdentity": "Genocs.Template",
   "shortName": "gnx-librawebapi",
   "tags": {
-    "type": "project",
+    "type": "solution",
     "language": "C#"
   },
   "sourceName": "Genocs.Library.Template", // Will replace the string 'Genocs.Library.Template' with the value provided via -n.
