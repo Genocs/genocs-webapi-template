@@ -1,4 +1,4 @@
-# Genocs.Library.Template service  
+# Genocs.Library.Template service
 
 [![Build status](https://ci.appveyor.com/api/projects/status/0i6s33kw3y87tkb2?svg=true)](https://ci.appveyor.com/project/genocs/genocs-webapi-template)  ![NuGet](https://buildstats.info/nuget/Genocs.Library.Template) 
 
@@ -14,8 +14,6 @@ To get all the information you need to use it: please check
 <img src="https://genocs-blog.netlify.app/library/logo_hu5f84e5ac74e01291dbce57bab350d273_35818_2000x0_resize_box_3.png"
      alt="Genocs Library logo"
      style="float: left; margin-right: 10px; padding-bottom: 50px;" />
-
-
 
 ---
 

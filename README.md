@@ -57,7 +57,6 @@ The goal of this repository is to help developers/companies kickstart their Web 
 
 ## Prerequisites
 - [.NET 8.x](https://dotnet.microsoft.com/download/dotnet/8.0)
-
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/preview/vs2022/)(optional)
 - [Visual Studio Code](https://code.visualstudio.com/download)(optional)
 - [Rider](https://www.jetbrains.com/rider/)(optional)
@@ -70,25 +69,29 @@ Open up your *Command Prompt* or *PowerShell* or "bash" and run the following co
 ``` bash
 # To clone the repository
 git clone https://github.com/Genocs/genocs-library-template
+
 # To build the nuget package
 nuget pack ./src/Package.Template.nuspec -NoDefaultExcludes -OutputDirectory ./out -Version 1.1.0
-```
 
-
-``` bash
 # To install the template
-dotnet new install Genocs.Library.Template
+dotnet new install ./out/Genocs.Library.Template.1.1.0.nupkg
+
+# To 
+dotnet new gnx-librawebapi --help
+dotnet new gnx-librawebapi --name {MyCompany.MyProject}
+
+
 ```
 
-or, 
-
-if you want to use a specific version of the template, 
-
-use
 
 ``` bash
-dotnet new install Genocs.Library.Template::0.1.1
+# To install the template from nuget
+dotnet new install Genocs.Library.Template
+
+# To install a specific version of the template
+dotnet new install Genocs.Library.Template::1.1.0
 ```
+
 
 This would install the `Genocs Library Web Api Template` globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **1.1.0** which is also one of the first stable release version of the package. It is highly likely that there is already a newer version available when you are reading this.
 
@@ -97,6 +100,65 @@ This would install the `Genocs Library Web Api Template` globally on your machin
 
 For more details on getting started, [read the documentation](https://genocs-blog.netlify.app/library/)
 
+Please check the [documentation](https://learn.microsoft.com/en-us/visualstudio/ide/how-to-locate-and-organize-project-and-item-templates?view=vs-2022) for more details. 
+
+
+## How to create a project
+
+Create, build, test and run:
+
+``` bash
+dotnet new i Genocs.Library.Template
+dotnet new gnx-librawebapi -n {CompanyName.ProjectName.ServiceName}
+cd {CompanyName.ProjectName.ServiceName}
+dotnet build ./src/{CompanyName.ProjectName.ServiceName}.WebApi
+dotnet build ./src/{CompanyName.ProjectName.ServiceName}.Worker
+
+dotnet test
+dotnet run ./src/{CompanyName.ProjectName.ServiceName}.WebApi
+```
+
+
+## How to build the package
+
+To build the package run the following commands:
+
+[Official Link](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates)
+
+
+``` bash
+cd ./src
+nuget pack
+dotnet new u Genocs.Library.Template
+dotnet new install ./out/Genocs.Library.Template.1.1.0.nupkg
+dotnet new gnx-librawebapi --help
+dotnet new gnx-librawebapi --name {MyCompany.MyProject}
+```
+
+
+## Sample application
+
+Run `dotnet new -i Genocs.Library.Template` then try the following commands.
+
+
+``` bash
+dotnet new gnx-librawebapi
+```
+
+
+## Miscellaneous
+
+Useful commands:
+
+``` bash
+# How to get the list of installed templates
+dotnet new -u
+
+dotnet --list
+```
+## Changelogs
+
+View Complete [Changelogs](https://github.com/Genocs/clean-architecture-template/blob/main/CHANGELOGS.md).
 
 ## License
 
@@ -104,7 +166,7 @@ This project is licensed with the [MIT license](LICENSE).
 
 ## Changelogs
 
-View Complete [Changelogs](https://github.com/Genocs/genocs-library-template/blob/main/CHANGELOGS.md).
+View Complete [Changelogs](https://github.com/Genocs/genocs-library-template/blob/main/CHANGELOG.md).
 
 ## Community
 
@@ -116,6 +178,7 @@ View Complete [Changelogs](https://github.com/Genocs/genocs-library-template/blo
 ## Support
 
 Has this Project helped you learn something New? or Helped you at work?
+
 Here are a few ways by which you can support.
 
 - ⭐ Leave a star!
