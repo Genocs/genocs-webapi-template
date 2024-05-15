@@ -71,10 +71,10 @@ Open up your *Command Prompt* or *PowerShell* or "bash" and run the following co
 git clone https://github.com/Genocs/genocs-library-template
 
 # To build the nuget package
-nuget pack ./src/Package.Template.nuspec -NoDefaultExcludes -OutputDirectory ./out -Version 1.1.0
+nuget pack ./src/Package.Template.nuspec -NoDefaultExcludes -OutputDirectory ./out -Version 1.1.1
 
 # To install the template
-dotnet new install ./out/Genocs.Library.Template.1.1.0.nupkg
+dotnet new install ./out/Genocs.Library.Template.1.1.1.nupkg
 
 # To 
 dotnet new gnx-librawebapi --help
@@ -89,7 +89,7 @@ dotnet new gnx-librawebapi --name {MyCompany.MyProject}
 dotnet new install Genocs.Library.Template
 
 # To install a specific version of the template
-dotnet new install Genocs.Library.Template::1.1.0
+dotnet new install Genocs.Library.Template::1.1.1
 ```
 
 
