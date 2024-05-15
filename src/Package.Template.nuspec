@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata minClientVersion="5.10.0">
-    <id>Genocs.Library.Template</id>
-    <version>1.1.0</version>
-    <title>Genocs - Library Web Api Template</title>
-    <authors>Nocco Giovanni Emanuele</authors>
-    <owners>[Genocs] Nocco Giovanni Emanuele</owners>
-    <projectUrl>https://github.com/Genocs/genocs-library-template</projectUrl>
-    <repository type="git" url="https://github.com/Genocs/genocs-library-template.git" branch="main" />
-    <license type="expression">MIT</license>
-    <icon>.\content\icon.png</icon>
-    <readme>.\content\README_NUGET.md</readme>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <copyright>2024</copyright>
-    <summary>.NET8 Genocs Library Template to implement solution base on Genocs Library.</summary>	
-    <description>.NET8 template designed for Genocs Library 5.x. It can be used to implements DDD, Separation of Concerns in Contracts, Domain, Application, Infrastructure, WebApi and Worker. Separated host for WebApi and Background worker. Docker compose debugging support.</description>
-    <releaseNotes>
-Relesase 1.1.1:
-- Minor bug fix
-    </releaseNotes>
-    <language>en-US</language>
-    <packageTypes>
-      <packageType name="Template" />
-    </packageTypes>
-    <tags>aggregate architecture boilerplate ddd design-patterns docker domain driven design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template masstransit microservice microservices rabbitmq service bus solid solid-principles templating webapi</tags>
-    <dependencies>
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="..\README_NUGET.md" target="content" />
-    <file src="..\icon.png" target="content" />
-    <file src="**" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.log;**\.vscode\**\*;" />
-  </files>
+	<metadata minClientVersion="5.10.0">
+		<id>Genocs.Library.Template</id>
+		<version>1.1.0</version>
+		<title>Genocs - Library Web Api Template</title>
+		<authors>Nocco Giovanni Emanuele</authors>
+		<owners>[Genocs] Nocco Giovanni Emanuele</owners>
+		<projectUrl>https://github.com/Genocs/genocs-library-template</projectUrl>
+		<repository type="git" url="https://github.com/Genocs/genocs-library-template.git" branch="main" />
+		<license type="expression">MIT</license>
+		<icon>.\content\icon.png</icon>
+		<readme>.\content\README_NUGET.md</readme>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<copyright>2024</copyright>
+		<summary>.NET8 Genocs Library Template to implement solution base on Genocs Library.</summary>
+		<description>.NET8 template designed for Genocs Library.</description>
+		<releaseNotes>
+			Relesase 1.1.1:
+			- Minor bug fix
+		</releaseNotes>
+		<language>en-US</language>
+		<packageTypes>
+			<packageType name="Template" />
+		</packageTypes>
+		<tags>aggregate architecture boilerplate ddd design-patterns docker domain driven design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template masstransit microservice microservices rabbitmq service bus solid solid-principles templating webapi</tags>
+		<dependencies>
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="..\README_NUGET.md" target="content" />
+		<file src="..\icon.png" target="content" />
+		<file src=".\**" target="content" exclude="**\bin\**\*;**\obj\**\*;**\*.user;**\*.log;**\.vscode\**\*;" />
+	</files>
 </package>

@@ -6,6 +6,7 @@
   ],
   "name": "Genocs: .NET8 Microservice template with Genocs library",
   "identity": "Genocs.Library.Template",
+  "description": ".NET8 Microservice Template built with Genocs library.",
   "groupIdentity": "Genocs.Template",
   "shortName": "gnx-librawebapi",
   "tags": {
@@ -48,6 +49,14 @@
   "sources": [
     {
       "source": "./",
+      "target": "./",
+      "exclude": [
+        ".template.config/**",
+        ".idea/**",
+        ".vs/**",
+        ".github/**",
+        "media/**"
+      ],      
       "modifiers": [
         {
           "condition": "(bare)",
@@ -57,7 +66,7 @@
           "condition": "(full)",
           "exclude": []
         }
-      ]      
+      ]
     }
   ],
   "primaryOutputs": [
