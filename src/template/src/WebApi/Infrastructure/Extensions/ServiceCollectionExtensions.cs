@@ -22,13 +22,14 @@ public static class ServiceCollectionExtensions
                 cfg.ConfigureEndpoints(context);
 
                 // cfg.UseHealthCheck(context);
-                cfg.Host(rabbitMQSettings.HostName, rabbitMQSettings.VirtualHost,
-                    h =>
-                    {
-                        h.Username(rabbitMQSettings.UserName);
-                        h.Password(rabbitMQSettings.Password);
-                    }
-                );
+                cfg.Host(
+                            rabbitMQSettings.HostName,
+                            rabbitMQSettings.VirtualHost,
+                            h =>
+                            {
+                                h.Username(rabbitMQSettings.UserName);
+                                h.Password(rabbitMQSettings.Password);
+                            });
             });
         });
 

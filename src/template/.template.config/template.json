@@ -7,13 +7,13 @@
   "name": "Genocs: .NET8 Microservice template with Genocs library",
   "identity": "Genocs.Library.Template",
   "description": ".NET8 Microservice Template built with Genocs library.",
-  "groupIdentity": "Genocs.Template",
+  "groupIdentity": "gnx_librawebapi",
   "shortName": "gnx-librawebapi",
   "tags": {
     "type": "solution",
     "language": "C#"
   },
-  "sourceName": "Genocs.Library.Template", // Will replace the string 'Genocs.Library.Template' with the value provided via -n.
+  "sourceName": "Genocs.Library.Template",
   "preferNameDirectory": true,
   "symbols": {
     "genocs-components": {
@@ -40,7 +40,7 @@
     "bare": {
       "type": "computed",
       "value": "(genocs-components == \"bare\")"
-    },    
+    },
     "full": {
       "type": "computed",
       "value": "(genocs-components == \"full\")"
@@ -56,7 +56,7 @@
         ".vs/**",
         ".github/**",
         "media/**"
-      ],      
+      ],
       "modifiers": [
         {
           "condition": "(bare)",

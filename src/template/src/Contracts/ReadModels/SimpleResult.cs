@@ -3,7 +3,7 @@
 public class SimpleResult
 {
     /// <summary>
-    /// The Message Id
+    /// The Message Id.
     /// </summary>
     public string? MessageId { get; set; }
 }
