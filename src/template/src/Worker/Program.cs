@@ -1,21 +1,15 @@
 using Genocs.Core.Builders;
+using Genocs.Library.Template.Worker;
+using Genocs.Library.Template.Worker.Consumers;
 using Genocs.Logging;
 using Genocs.Monitoring;
 using Genocs.Persistence.MongoDb.Extensions;
-using Genocs.Library.Template.Worker;
-using Genocs.Library.Template.Worker.Consumers;
 using MassTransit;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Serilog;
-using Serilog.Events;
 using System.Reflection;
 
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Information()
-    .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-    .Enrich.FromLogContext()
-    .WriteTo.Console()
-    .CreateLogger();
+StaticLogger.EnsureInitialized();
 
 IHost host = Host.CreateDefaultBuilder(args)
     .UseLogging()
