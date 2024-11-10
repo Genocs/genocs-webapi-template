@@ -1,6 +1,6 @@
-﻿using Genocs.Persistence.MongoDb.Repositories;
-using Genocs.Library.Template.Contracts.Commands;
+﻿using Genocs.Library.Template.Contracts.Commands;
 using Genocs.Library.Template.Domain.Aggregates;
+using Genocs.Persistence.MongoDb.Domain.Repositories;
 using MassTransit;
 
 namespace Genocs.Library.Template.Worker.Consumers;

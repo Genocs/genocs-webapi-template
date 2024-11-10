@@ -1,5 +1,5 @@
-﻿using Genocs.Persistence.MongoDb.Repositories;
-using Genocs.Library.Template.Domain.Aggregates;
+﻿using Genocs.Library.Template.Domain.Aggregates;
+using Genocs.Persistence.MongoDb.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Genocs.Library.Template.WebApi.Controllers;

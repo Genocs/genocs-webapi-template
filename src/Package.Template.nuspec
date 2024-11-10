@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata minClientVersion="5.10.0">
 		<id>Genocs.Library.Template</id>
-		<version>1.1.0</version>
+		<version>1.2.0</version>
 		<title>Genocs - Library Web Api Template</title>
 		<authors>Nocco Giovanni Emanuele</authors>
 		<owners>[Genocs] Nocco Giovanni Emanuele</owners>
@@ -16,14 +16,14 @@
 		<summary>.NET8 Genocs Library Template to implement solution base on Genocs Library.</summary>
 		<description>.NET8 template designed for Genocs Library.</description>
 		<releaseNotes>
-			Relesase 1.1.1:
-			- Minor bug fix
+			Relesase 1.2.0:
+			- Updated to Genocs Library to 6.4.0
 		</releaseNotes>
 		<language>en-US</language>
 		<packageTypes>
 			<packageType name="Template" />
 		</packageTypes>
-		<tags>aggregate architecture boilerplate ddd design-patterns docker domain driven design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template masstransit microservice microservices rabbitmq service bus solid solid-principles templating webapi</tags>
+		<tags>architecture boilerplate ddd design-patterns docker domain driven design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template masstransit microservice microservices rabbitmq service bus solid solid-principles templating webapi</tags>
 		<dependencies>
 		</dependencies>
 	</metadata>
