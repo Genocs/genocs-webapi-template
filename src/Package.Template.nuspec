@@ -16,14 +16,14 @@
 		<summary>.NET8 Genocs Library Template to implement solution base on Genocs Library.</summary>
 		<description>.NET8 template designed for Genocs Library.</description>
 		<releaseNotes>
-			Relesase 1.1.1:
-			- Minor bug fix
+			Relesase 1.2.0:
+			- Updated to Genocs Library to 6.4.0
 		</releaseNotes>
 		<language>en-US</language>
 		<packageTypes>
 			<packageType name="Template" />
 		</packageTypes>
-		<tags>aggregate architecture boilerplate ddd design-patterns docker domain driven design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template masstransit microservice microservices rabbitmq service bus solid solid-principles templating webapi</tags>
+		<tags>architecture boilerplate ddd design-patterns docker domain driven design dotnet dotnetcore dotnet-core dotnet-cli dotnet-new dotnet-template masstransit microservice microservices rabbitmq service bus solid solid-principles templating webapi</tags>
 		<dependencies>
 		</dependencies>
 	</metadata>

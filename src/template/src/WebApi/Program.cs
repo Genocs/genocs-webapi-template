@@ -4,6 +4,8 @@ using Genocs.Core.CQRS.Events;
 using Genocs.Core.CQRS.Queries;
 using Genocs.Discovery.Consul;
 using Genocs.HTTP;
+using Genocs.Library.Template.WebApi;
+using Genocs.Library.Template.WebApi.Infrastructure.Extensions;
 using Genocs.LoadBalancing.Fabio;
 using Genocs.Logging;
 using Genocs.MessageBrokers.Outbox;
@@ -19,10 +21,7 @@ using Genocs.WebApi.CQRS;
 using Genocs.WebApi.Security;
 using Genocs.WebApi.Swagger;
 using Genocs.WebApi.Swagger.Docs;
-using Genocs.Library.Template.WebApi;
-using Genocs.Library.Template.WebApi.Infrastructure.Extensions;
 using Serilog;
-using Genocs.Tracing;
 
 StaticLogger.EnsureInitialized();
 
@@ -41,7 +40,6 @@ services.AddGenocs()
         .AddCorrelationContextLogging()
         .AddConsul()
         .AddFabio()
-        .AddOpenTelemetry()
         .AddMongo()
         // .AddMongoRepository<Product, Guid>("products")
         .AddCommandHandlers()

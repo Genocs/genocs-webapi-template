@@ -1,8 +1,7 @@
-﻿using Genocs.Common.Types;
-using Genocs.Core.Domain.Entities;
+﻿using Genocs.Core.Domain.Entities;
 using Genocs.Core.Domain.Entities.Auditing;
 using Genocs.Core.Domain.Repositories;
-using Genocs.Persistence.MongoDb.Repositories.Clean;
+using Genocs.Persistence.MongoDb.Domain.Entities;
 using MongoDB.Bson;
 
 namespace Genocs.Library.Template.Domain.Aggregates;
@@ -21,8 +20,8 @@ public class Order : AggregateRoot<ObjectId>, IMongoDbEntity, IHasCreationTime
 
     public string OrderId { get; set; } = Guid.NewGuid().ToString();
     public string UserId { get; set; } = default!;
-    public DateTime CreationTime { get; set; } = DateTime.UtcNow;
     public string CardToken { get; set; } = default!;
     public decimal Amount { get; set; }
     public string Currency { get; set; } = default!;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }
