@@ -20,6 +20,7 @@ public class MongoDictionarySerializer : SerializerBase<IDictionary<string, obje
 
         return JsonConvert.DeserializeObject<Dictionary<string, object>>(result);
     }
+
     public override void Serialize(BsonSerializationContext context, BsonSerializationArgs args, IDictionary<string, object> value)
     {
 

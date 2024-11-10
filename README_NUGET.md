@@ -78,11 +78,13 @@ if you want to use a specific version of the template,
 use
 
 ``` bash
+
 dotnet new -install Genocs.Library.Template::1.3.0
 ```
 
 
 This would install the `Genocs Library Web Api Template` globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **1.3.0** which is also one of the first stable release version of the package. It is highly likely that there is already a newer version available when you are reading this.
+
 
 > *To get the latest version of the package, visit [nuget.org](https://www.nuget.org/packages/Genocs.Library.Template/)*
 >

@@ -14,7 +14,8 @@ public class FileUploadController : ControllerBase
     /// <param name="files"></param>
     /// <param name="fileTag"></param>
     /// <returns></returns>
-    [Route(""), HttpPost]
+    [Route("")]
+    [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> PostUploadAndEvaluate([FromForm(Name = "docs")] List<IFormFile> files, [FromQuery] string fileTag)
