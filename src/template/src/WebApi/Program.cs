@@ -12,16 +12,17 @@ using Genocs.MessageBrokers.Outbox;
 using Genocs.MessageBrokers.Outbox.MongoDB;
 using Genocs.MessageBrokers.RabbitMQ;
 using Genocs.Metrics.Prometheus;
-using Genocs.Monitoring;
+using Genocs.Tracing;
 using Genocs.Persistence.MongoDb.Extensions;
 using Genocs.Persistence.Redis;
 using Genocs.Secrets.Vault;
 using Genocs.WebApi;
-using Genocs.WebApi.CQRS;
 using Genocs.WebApi.Security;
 using Genocs.WebApi.Swagger;
 using Genocs.WebApi.Swagger.Docs;
 using Serilog;
+
+// using System.Reflection;
 
 StaticLogger.EnsureInitialized();
 
@@ -31,9 +32,11 @@ builder.Host
         .UseLogging()
         .UseVault();
 
-var services = builder.Services;
+var gnxBuilder = builder
+                        .AddGenocs()
+                        .AddOpenTelemetry();
 
-services.AddGenocs()
+gnxBuilder
         .AddErrorHandler<ExceptionToResponseMapper>()
         .AddServices()
         .AddHttpClient()
@@ -41,7 +44,10 @@ services.AddGenocs()
         .AddConsul()
         .AddFabio()
         .AddMongo()
+
+        // .AddMongoFast()
         // .AddMongoRepository<Product, Guid>("products")
+        // .RegisterMongoRepositories(Assembly.GetExecutingAssembly())
         .AddCommandHandlers()
         .AddEventHandlers()
         .AddQueryHandlers()
@@ -49,18 +55,19 @@ services.AddGenocs()
         .AddInMemoryEventDispatcher()
         .AddInMemoryQueryDispatcher()
         .AddPrometheus()
-        .AddRedis()
-        .AddRabbitMq()
-        .AddMessageOutbox(o => o.AddMongo())
+        .AddRedis();
+
+await gnxBuilder.AddRabbitMQAsync();
+
+gnxBuilder.AddMessageOutbox(o => o.AddMongo())
         .AddWebApi()
         .AddSwaggerDocs()
         .AddWebApiSwaggerDocs()
         .Build();
 
-// START: TO be Refactory
+var services = builder.Services;
 
-//services.AddMongoDatabase(builder.Configuration);
-//services.RegisterRepositories(Assembly.GetExecutingAssembly());
+// START: TO be Refactory
 
 //services.AddCors();
 //services.AddControllers().AddJsonOptions(x =>
@@ -68,8 +75,6 @@ services.AddGenocs()
 //    // serialize Enums as strings in api responses (e.g. Role)
 //    x.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 //});
-
-//services.AddHealthChecks();
 
 //services.Configure<HealthCheckPublisherOptions>(options =>
 //{
@@ -86,12 +91,7 @@ services.AddCustomMassTransit(builder.Configuration);
 
 // services.AddOptions();
 
-// Set Custom Open telemetry
-services.AddCustomOpenTelemetry(builder.Configuration);
-
 var app = builder.Build();
-
-// START: TO be Refactory
 
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
@@ -109,14 +109,11 @@ app.UseGenocs()
     .UseRouting()
     .UseCertificateAuthentication()
     .UseEndpoints(r => r.MapControllers())
-    .UseDispatcherEndpoints(endpoints => endpoints
-        .Get(string.Empty, ctx => ctx.Response.WriteAsync("Genocs.Library.Template Service"))
-        .Get("ping", ctx => ctx.Response.WriteAsync("pong")))
     //.Get<GetOrder, OrderDto>("orders/{orderId}")
     //.Post<CreateOrder>("orders",
     //    afterDispatch: (cmd, ctx) => ctx.Response.Created($"orders/{cmd.OrderId}")))
     .UseSwaggerDocs()
-    .UseRabbitMq();
+    .UseRabbitMQ();
 //    .SubscribeEvent<DeliveryStarted>();
 
 // global cors policy
@@ -134,7 +131,7 @@ app.UseGenocs()
 
 // app.MapControllers();
 
-// app.MapHealthChecks("/hc");
+app.MapDefaultEndpoints();
 
 app.Run();
 

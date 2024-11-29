@@ -1,40 +1,37 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <DockerTargetOS>Linux</DockerTargetOS>
         <UserSecretsId>Genocs</UserSecretsId>
-        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <DockerfileContext>..\..</DockerfileContext>
         <RootNamespace>Genocs.Library.Template.WebApi</RootNamespace>
         <AssemblyName>Genocs.Library.Template.WebApi</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Genocs.HTTP" Version="6.4.0" />
-        <PackageReference Include="Genocs.LoadBalancing.Fabio" Version="6.4.0" />
-        <PackageReference Include="Genocs.Logging" Version="6.4.0" />
-        <PackageReference Include="Genocs.MessageBrokers" Version="6.4.0" />
-        <PackageReference Include="Genocs.MessageBrokers.Outbox.MongoDB" Version="6.4.0" />
-        <PackageReference Include="Genocs.MessageBrokers.Outbox" Version="6.4.0" />
-        <PackageReference Include="Genocs.MessageBrokers.RabbitMQ" Version="6.4.0" />
-        <PackageReference Include="Genocs.Metrics" Version="6.4.0" />
-        <PackageReference Include="Genocs.Monitoring" Version="5.0.*" />
-        <PackageReference Include="Genocs.Persistence.MongoDb" Version="6.4.0" />
-        <PackageReference Include="Genocs.Persistence.Redis" Version="6.4.0" />
-        <PackageReference Include="Genocs.Secrets.Vault" Version="6.4.0" />
-        <PackageReference Include="Genocs.Tracing" Version="6.4.0" />
-        <PackageReference Include="Genocs.WebApi.CQRS" Version="6.4.0" />
-        <PackageReference Include="Genocs.WebApi.Security" Version="6.4.0" />
-        <PackageReference Include="Genocs.WebApi.Swagger" Version="6.4.0" />
-        <PackageReference Include="Genocs.WebApi" Version="6.4.0" />
+        <PackageReference Include="Genocs.HTTP" Version="7.1.0" />
+        <PackageReference Include="Genocs.LoadBalancing.Fabio" Version="7.1.0" />
+        <PackageReference Include="Genocs.Logging" Version="7.1.0" />
+        <PackageReference Include="Genocs.MessageBrokers" Version="7.1.0" />
+        <PackageReference Include="Genocs.MessageBrokers.Outbox.MongoDB" Version="7.1.0" />
+        <PackageReference Include="Genocs.MessageBrokers.Outbox" Version="7.1.0" />
+        <PackageReference Include="Genocs.MessageBrokers.RabbitMQ" Version="7.1.0" />
+        <PackageReference Include="Genocs.Metrics" Version="7.1.0" />
+        <PackageReference Include="Genocs.Persistence.MongoDb" Version="7.1.0" />
+        <PackageReference Include="Genocs.Persistence.Redis" Version="7.1.0" />
+        <PackageReference Include="Genocs.Secrets.Vault" Version="7.1.0" />
+        <PackageReference Include="Genocs.Tracing" Version="7.1.0" />
+        <PackageReference Include="Genocs.WebApi.CQRS" Version="7.1.0" />
+        <PackageReference Include="Genocs.WebApi.Security" Version="7.1.0" />
+        <PackageReference Include="Genocs.WebApi.Swagger" Version="7.1.0" />
+        <PackageReference Include="Genocs.WebApi" Version="7.1.0" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.1" />
+        <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.2" />
         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
         <PackageReference Include="Serilog.Sinks.ApplicationInsights" Version="4.0.0" />
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="7.1.0" />
     </ItemGroup>
 
     <ItemGroup>
