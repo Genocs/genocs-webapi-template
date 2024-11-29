@@ -1,12 +1,12 @@
 {
   "profiles": {
-    "WebApi": {
+    "Locali": {
       "commandName": "Project",
       "launchBrowser": true,
+      "applicationUrl": "https://localhost:54540;http://localhost:54541",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:54540;http://localhost:54541"
+      }
     }
   }
 }
