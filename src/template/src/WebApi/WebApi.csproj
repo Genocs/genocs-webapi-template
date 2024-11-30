@@ -2,10 +2,9 @@
 
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
-        <DockerTargetOS>Linux</DockerTargetOS>
-        <UserSecretsId>Genocs</UserSecretsId>
         <RootNamespace>Genocs.Library.Template.WebApi</RootNamespace>
         <AssemblyName>Genocs.Library.Template.WebApi</AssemblyName>
+        <UserSecretsId>Genocs</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>

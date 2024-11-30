@@ -21,8 +21,8 @@ using Genocs.WebApi.Security;
 using Genocs.WebApi.Swagger;
 using Genocs.WebApi.Swagger.Docs;
 using Serilog;
+using System.Reflection;
 
-// using System.Reflection;
 
 StaticLogger.EnsureInitialized();
 
@@ -44,10 +44,8 @@ gnxBuilder
         .AddConsul()
         .AddFabio()
         .AddMongo()
-
-        // .AddMongoFast()
-        // .AddMongoRepository<Product, Guid>("products")
-        // .RegisterMongoRepositories(Assembly.GetExecutingAssembly())
+        .AddMongoFast(registerConventions: false)
+        .RegisterMongoRepositories(Assembly.GetExecutingAssembly())
         .AddCommandHandlers()
         .AddEventHandlers()
         .AddQueryHandlers()
