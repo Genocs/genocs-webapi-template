@@ -4,11 +4,10 @@ public class RabbitMQSettings
 {
     public const string Position = "RabbitMQ";
 
-    public string HostName { get; set; } = default!;
-    public string VirtualHost { get; set; } = default!;
-    public string UserName { get; set; } = default!;
-    public string Password { get; set; } = default!;
-    public int Port { get; set; } = default!;
+    public string HostName { get; set; } = "localhost";
+    public string VirtualHost { get; set; } = "/";
+    public string UserName { get; set; } = "guest";
+    public string Password { get; set; } = "guest";
+    public int Port { get; set; } = 5672;
     public bool UseSSL { get; set; }
-
 }

@@ -6,5 +6,5 @@ case "$TRAVIS_BRANCH" in
     ;;
 esac
 
-dotnet build ../src/WebApi -c release
-dotnet build ../src/Worker -c release
+dotnet build ../src/WebApi -c Release
+dotnet build ../src/Worker -c Release

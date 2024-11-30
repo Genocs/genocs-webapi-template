@@ -28,7 +28,6 @@ public class ServiceBusMassTransitController : ControllerBase
         // Publish an event with MassTransit
         await _publishEndpoint.Publish<SubmitOrder>(new
         {
-            Id = Guid.NewGuid().ToString(),
             OrderId = Guid.NewGuid().ToString(),
             UserId = Guid.NewGuid().ToString()
         });

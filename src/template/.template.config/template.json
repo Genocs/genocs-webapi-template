@@ -4,9 +4,9 @@
   "classifications": [
     "Web/ASP.NET"
   ],
-  "name": "Genocs: .NET8 Microservice template with Genocs library",
+  "name": "Genocs Microservice application with Genocs library",
   "identity": "Genocs.Library.Template",
-  "description": ".NET8 Microservice Template built with Genocs library.",
+  "description": "Genocs Microservice application with Genocs library.",
   "groupIdentity": "gnx_librawebapi",
   "shortName": "gnx-librawebapi",
   "tags": {

@@ -2,7 +2,9 @@
 
 public class SubmitOrder
 {
-    Guid Id { get; }
+    private Guid Id { get; } = Guid.NewGuid();
+
     public string? OrderId { get; }
     public string? UserId { get; }
+
 }

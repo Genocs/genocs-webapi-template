@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Locali": {
+    "Local": {
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "https://localhost:54540;http://localhost:54541",
