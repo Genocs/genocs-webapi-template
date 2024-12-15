@@ -23,7 +23,6 @@ using Genocs.WebApi.Swagger.Docs;
 using Serilog;
 using System.Reflection;
 
-
 StaticLogger.EnsureInitialized();
 
 var builder = WebApplication.CreateBuilder(args);
