@@ -5,6 +5,8 @@
         <UserSecretsId>Genocs</UserSecretsId>
         <RootNamespace>Genocs.Library.Template.Worker</RootNamespace>
         <AssemblyName>Genocs.Library.Template.Worker</AssemblyName>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..</DockerfileContext>
     </PropertyGroup>
 
     <ItemGroup>

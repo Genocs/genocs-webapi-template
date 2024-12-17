@@ -136,8 +136,8 @@ To build the docker images:
 
 ``` sh
 # Manual build
-docker build -t genocs/genocs.library.template.webapi -f ./webapi.dockerfile .
-docker build -t genocs/genocs.library.template.worker -f ./worker.dockerfile .
+docker build -t genocs/genocs.library.template.webapi -f ./src/WebApi/Dockerfile .
+docker build -t genocs/genocs.library.template.worker -f ./src/Worker/Dockerfile .
 
 # Build using docker compose
 # Remember to update the .env file with the correct values

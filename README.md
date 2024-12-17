@@ -17,7 +17,7 @@
 [license-url]: https://github.com/Genocs/genocs-library-template/blob/main/LICENSE
 [build-shield]: https://github.com/Genocs/genocs-library-template/actions/workflows/build_and_test.yml/badge.svg?branch=main
 [build-url]: https://github.com/Genocs/genocs-library-template/actions/workflows/build_and_test.yml
-[package-shield]: https://img.shields.io/badge/nuget-v.1.5.0-blue?&label=latests&logo=nuget
+[package-shield]: https://img.shields.io/badge/nuget-v.1.5.1-blue?&label=latests&logo=nuget
 [package-url]: https://github.com/Genocs/genocs-library-template/actions/workflows/build_and_test.yml
 [downloads-shield]: https://img.shields.io/nuget/dt/Genocs.Library.Template.svg?color=2da44e&label=downloads&logo=nuget
 [downloads-url]: https://www.nuget.org/packages/Genocs.Library.Template
@@ -71,10 +71,10 @@ Open up your *Command Prompt* or *PowerShell* or "bash" and run the following co
 git clone https://github.com/Genocs/genocs-library-template
 
 # To build the nuget package
-nuget pack ./src/Package.Template.nuspec -NoDefaultExcludes -OutputDirectory ./out -Version 1.5.0
+nuget pack ./src/Package.Template.nuspec -NoDefaultExcludes -OutputDirectory ./out -Version 1.5.1
 
 # To install the template
-dotnet new install ./out/Genocs.Library.Template.1.5.0.nupkg
+dotnet new install ./out/Genocs.Library.Template.1.5.1.nupkg
 
 # To 
 dotnet new gnx-librawebapi --help
@@ -90,10 +90,10 @@ dotnet new install Genocs.Library.Template
 
 # To install a specific version of the template
 
-dotnet new install Genocs.Library.Template::1.5.0
+dotnet new install Genocs.Library.Template::1.5.1
 ```
 
-This would install the `Genocs Library Web Api Template` globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **1.5.0** which is also one of the first stable release version of the package. It is highly likely that there is already a newer version available when you are reading this.
+This would install the `Genocs Library Web Api Template` globally on your machine. Do note that, at the time of writing this documentation, the latest available version is **1.5.1** which is also one of the first stable release version of the package. It is highly likely that there is already a newer version available when you are reading this.
 
 
 > *To get the latest version of the package, visit [nuget.org](https://www.nuget.org/packages/Genocs.Library.Template/)*
@@ -132,7 +132,7 @@ cd ./src
 nuget pack
 dotnet new u Genocs.Library.Template
 
-dotnet new install ./out/Genocs.Library.Template.1.5.0.nupkg
+dotnet new install ./out/Genocs.Library.Template.1.5.1.nupkg
 
 dotnet new gnx-librawebapi --help
 dotnet new gnx-librawebapi --name {MyCompany.MyProject}
