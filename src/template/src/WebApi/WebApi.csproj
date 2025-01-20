@@ -22,10 +22,10 @@
         <PackageReference Include="Genocs.Persistence.Redis" Version="7.2.1" />
         <PackageReference Include="Genocs.Secrets.Vault" Version="7.2.1" />
         <PackageReference Include="Genocs.Tracing" Version="7.2.1" />
-        <PackageReference Include="Genocs.WebApi.CQRS" Version="7.2.1" />
+        <PackageReference Include="Genocs.WebApi.CQRS" Version="7.2.3" />
         <PackageReference Include="Genocs.WebApi.Security" Version="7.2.1" />
         <PackageReference Include="Genocs.WebApi.Swagger" Version="7.2.1" />
-        <PackageReference Include="Genocs.WebApi" Version="7.2.1" />
+        <PackageReference Include="Genocs.WebApi" Version="7.2.3" />
     </ItemGroup>
 
     <ItemGroup>
